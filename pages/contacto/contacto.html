@@ -1,88 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACTO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="contacto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!--Nombre, Correo electrónico, Teléfono, Mensaje-->
-<header> 
-    <section>
-        <div class="barra_lateral">
-            <div>
-                <img src="../../assets/Logo-01.png" alt="logo"> 
+    <!-- ******************BARRA DE NAVEGACION********************* -->
+    <nav class="navbar fixed-top" style="background-color: transparent; border: none;">
+        <div class="container-fluid">
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li>
+                            <div>
+                                <img id="logo" src="../../assets/Logo-01.png" alt="logo">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Feed</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tablero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ajustes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <nav class="barra_navegacion">
-                <ul>
-                    <li>
-                        <a href="">TU PERFIL</a>
-                    </li>
-                    <li>
-                        <a href="">FEED</a>
-                    </li>
-                    <li>
-                        <a href="">TABLERO</a>
-                    </li>
-                    <li>
-                        <a href="">AJUSTES</a>
-                    </li>
-                    <li>
-                        <a href="">NOSOTRAS</a>
-                    </li>
-                    <li>
-                        <a href="">CONTACTO</a>
-                    </li>
-                </ul>
-            </nav>
-        </div> 
-    </section>
-    <label id="tituloContacto" class="d-flex justify-content-center p-5 rounded-5 mb-5">
-        <h1>Contacto</h1>
-    </label>
-</header>
-
-<main class="d-flex justify-content-center">
-    <section id="box-contacto" class="p-5 rounded-5" style="width: 30rem;">
-        <form id="form-enviar" action="https://formsubmit.co/orbitaconmujeres@gmail.com" method="post">
-            <fieldset id="datosContacto">
-                <!-- Datos de envío -->
-                <div class="datos-contacto">
-                    <input id="Nombre" class="form-control rounded-5 mb-3" type="text" placeholder="Nombre" name="nombre-contacto" required>
-                </div>
-                <div class="datos-contacto">
-                    <input id="Apellido" class="form-control rounded-5 mb-3" type="text" placeholder="Apellido" name="apellido-contacto" required>
-                </div>
-                <div class="datos-contacto">
-                    <input id="E-mail" class="form-control rounded-5 mb-3" type="email" placeholder="Correo electrónico" name="email-contacto" required>
-                </div>
-                <div class="datos-contacto">
-                    <input id="Telefono" class="form-control rounded-5 mb-3" type="tel" placeholder="Teléfono" name="telefono-contacto" required>
-                </div>
-                <div class="datos-contacto">
-                    <textarea id="Mensaje" class="form-control rounded-5 mb-3" placeholder="Mensaje" name="mensaje-contacto" required></textarea>
-                </div>
-                
-            </fieldset>
-        </form> 
-        <div class="d-flex justify-content-center">
-            <button id="btn-enviar" class="btn text-white rounded-5 mt-3 shadow" type="submit" name="boton-envio">Enviar</button>
         </div>
-    </section>
-</main>
-    
+    </nav>
+
+    <header>
+        <section class="header-pagina">
+            <label id="tituloContacto" class="d-flex justify-content-center p-5 rounded-5 mb-5">
+                <h1>Contacto</h1>
+
+            </label>
+        </section>
+    </header>
+    <!--Nombre, Correo electrónico, Teléfono, Mensaje-->
+    <main class="d-flex justify-content-center">
+        <section id="box-contacto" class="p-5 rounded-5" style="width: 30rem;">
+            <form id="form-enviar" action="https://formsubmit.co/orbitaconmujeres@gmail.com" method="post">
+                <fieldset id="datosContacto">
+                    <!-- Datos de envío -->
+                    <div class="datos-contacto">
+                        <input id="Nombre" class="form-control rounded-5 mb-3" type="text" placeholder="Nombre"
+                            name="nombre-contacto" required>
+                    </div>
+                    <div class="datos-contacto">
+                        <input id="Apellido" class="form-control rounded-5 mb-3" type="text" placeholder="Apellido"
+                            name="apellido-contacto" required>
+                    </div>
+                    <div class="datos-contacto">
+                        <input id="E-mail" class="form-control rounded-5 mb-3" type="email"
+                            placeholder="Correo electrónico" name="email-contacto" required>
+                    </div>
+                    <div class="datos-contacto">
+                        <input id="Telefono" class="form-control rounded-5 mb-3" type="tel" placeholder="Teléfono"
+                            name="telefono-contacto" required>
+                    </div>
+                    <div class="datos-contacto">
+                        <textarea id="Mensaje" class="form-control rounded-5 mb-3" placeholder="Mensaje"
+                            name="mensaje-contacto" required></textarea>
+                    </div>
+
+                </fieldset>
+            </form>
+            <div class="d-flex justify-content-center">
+                <button id="btn-enviar" class="btn text-white rounded-5 mt-3 shadow" type="submit"
+                    name="boton-envio">Enviar</button>
+            </div>
+        </section>
+    </main>
 
 
-<footer>
-    <h3>PENDIENTE</h3>
-</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="contacto.js"></script>
+    <footer>
+        <h3>PENDIENTE</h3>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="contacto.js"></script>
 </body>
+
 </html>

@@ -1,3 +1,8 @@
+body {
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,243,243,1) 58%) !important;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,12 +16,23 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+.navbar {
+    background-color: #eee9af !important; /* Cambia el color aquí */
+    border: none;
+    margin-bottom: 10px;
+}
+
  /* Color y tamaño de la barra de navegacion */
 .offcanvas {
     background-color: #eee9af;
     height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
+}
+
+.bg-body-tertiary {
+    background-color: #eee9af;
 }
 
 .offcanvas-body ul {
@@ -75,8 +91,7 @@
 .custom-container {
     width: 100%;
     padding: 35px 0;
-    margin: 20px auto;
-    margin-bottom: 70px;
+    margin: 80px auto !important; 
     box-sizing: border-box;
     position: relative;
     display: flex;

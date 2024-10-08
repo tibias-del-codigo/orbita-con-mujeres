@@ -79,3 +79,14 @@ function adjustSpacing() {
 
 window.addEventListener('load', adjustSpacing);
 window.addEventListener('resize', adjustSpacing);
+
+
+
+
+
+
+
+window.onload = function() {
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+    document.querySelector('header').style.marginTop = `${navbarHeight}px`;
+};

@@ -1,0 +1,305 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+/***** CUADRO DE CONTACTO *****/
+.form-control{
+    background: rgba(255, 255, 255, 0.829);
+}
+
+.datos-contacto>textarea#Mensaje {
+    height: 250px;
+    resize: none;
+    border-radius: 20px;
+}
+
+#box-contacto{
+    background: #FFD169;
+    box-shadow: 0 0 10px 40px #FFD169;
+    font-family: "Poppins", sans-serif;
+  /*  font-family: "Montserrat", sans-serif;   */
+}
+
+.btn{
+    background: #E54875;
+    font-size: 20px;
+    width: 200px;
+
+}
+
+.btn:hover {
+    background-color: #E54875;
+}
+
+
+/***** TITULO *****/
+
+/* Estilos del contenedor*/
+.custom-container {
+    width: 100%;
+    padding: 35px 0;
+    margin: 50px auto !important; 
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.header-pagina {
+    background: linear-gradient(to bottom, #a8f57a, #ffffff);
+    text-align: center;
+}
+
+/* Estilo del texto */
+.title {
+    font-size: 11em;
+    font-family: "Style Script", cursive;
+    color: white; 
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/***** BARRA DE NAVEGACION  *****/
+
+/* parte 1 de la animacion para que los botones aparezcan suavemente */
+.offcanvas.show .nav-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar {
+    background-color: #eee9af !important; /* Cambia el color aquí */
+    border: none;
+    margin-bottom: 10px;
+}
+
+/* Color y tamaño de la barra de navegacion */
+.offcanvas {
+    background-color: #EEE9AF;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.bg-body-tertiary {
+    background-color: #eee9af;
+}
+
+.offcanvas-body ul {
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Estilos para cada boton de la barra de navegacion */
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 0.3em;
+    border-radius: 30px;
+    font-size: 1.5em;
+    font-family: "Poppins";
+    /* parte 2 de la animacion para que los botones aparezcan suavemente */
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Hace que el enlace se centre en el list item de la barra de navegacion */
+.nav-item a {
+    display: block; 
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    color: initial; 
+    text-decoration: none;
+} 
+
+.nav-item:hover {
+    background-color: #7A8937;
+    font-weight:500 ;
+}
+
+.nav-item a:hover{
+    color: white;
+}
+
+#logo {
+    display: flex;
+    width: 10em;
+    height: 10em;
+    margin: 0 auto;
+    background: transparent;
+    margin-top: 10vh;
+}
+
+/* Sección de etiquetas */
+.tags-section {
+    margin-bottom: 20px;
+}
+
+.tag-button {
+    background-color: #ffffff;
+    border: 1px solid #7A8937;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins";
+}
+
+.tag-button:hover {
+    background-color: #7A8937;
+    color: white;
+}
+
+/* Sección de nuevo post */
+.section-new-post{
+    margin: 35px;
+}
+
+.new-post {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: auto;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    position:relative ;
+}
+
+/* Contenedor para la imagen de perfil y el input+botón */
+.post-header {
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    margin-bottom: 15px; 
+}
+
+.profile-pic-status-bar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px; 
+}
+
+/* Contenedor del input y botón publicar */
+.input-publish-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-post {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-right: 10px; 
+}
+
+/* Botón Publicar */
+.publish-button {
+    background-color: #e7e7e7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 0 20px;
+}
+
+.publish-button:hover {
+    background-color: #E54875; 
+    color: white;
+}
+
+/* Botones Foto/Video y Sentimiento/Actividad */
+.post-options {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px; 
+}
+
+.carita-feliz{
+margin-right: 5px;
+
+}
+
+.media-button,
+.activity-button {
+    background-color: #e7e7e7;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.media-button:hover,
+.activity-button:hover {
+    background-color: #7A8937;
+    color: white;
+}
+
+/* publicaciónes */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.user {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Poppins";
+}
+
+.text {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Estamos en proceso de errores CARDS */
+
+.card {
+    font-family: "Montserrat", sans-serif;
+}
+
+.user{
+    font-family: "Poppins";
+}

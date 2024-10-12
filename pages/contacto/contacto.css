@@ -80,7 +80,14 @@
     z-index: 1;
 }
 
-/***** BARRA DE NAVEGACION  *****/
+/* ====== BARRA DE NAVEGACION ====== */
+
+#logo-barra-fija {
+    max-width: 50px;  
+    height: auto;    
+    object-fit: contain; 
+    margin-left: 10px; 
+}
 
 /* parte 1 de la animacion para que los botones aparezcan suavemente */
 .offcanvas.show .nav-item {
@@ -94,9 +101,9 @@
     margin-bottom: 10px;
 }
 
-/* Color y tamaño de la barra de navegacion */
+ /* Color y tamaño de la barra de navegacion */
 .offcanvas {
-    background-color: #EEE9AF;
+    background-color: #eee9af;
     height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
@@ -113,7 +120,6 @@
 }
 
 /* Estilos para cada boton de la barra de navegacion */
-
 .nav-item {
     display: flex;
     justify-content: center;
@@ -140,21 +146,19 @@
 } 
 
 .nav-item:hover {
-    background-color: #7A8937;
-    font-weight:500 ;
+    background-color: #7a8937;
+    font-weight: 500;
 }
 
-.nav-item a:hover{
+.nav-item a:hover {
     color: white;
 }
 
 #logo {
     display: flex;
-    width: 10em;
-    height: 10em;
+    width: 6em;
+    height: 6em;
     margin: 0 auto;
+    margin-top: 0;
     background: transparent;
-    margin-top: 10vh;
 }
-
-

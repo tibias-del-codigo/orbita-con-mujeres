@@ -1,5 +1,11 @@
 /* ====== BARRA DE NAVEGACION ====== */
 
+#logo-barra-fija {
+    max-width: 50px;  
+    height: auto;    
+    object-fit: contain; 
+    margin-left: 10px; 
+}
 /* parte 1 de la animacion para que los botones aparezcan suavemente */
 .offcanvas.show .nav-item {
     opacity: 1;
@@ -72,4 +78,13 @@
     margin: 0 auto;
     margin-top: 0;
     background: transparent;
+}
+
+/* EN PROGRESO */
+main {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;     /* Centrar verticalmente */
+    height: 100vh;           /* Altura completa del viewport */
+    text-align: center;
 }

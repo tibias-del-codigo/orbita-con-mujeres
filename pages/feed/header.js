@@ -59,3 +59,9 @@ function adjustOffcanvasWidth() {
 window.addEventListener("load", adjustOffcanvasWidth);
 window.addEventListener("resize", adjustOffcanvasWidth);
 
+window.onload = function() {
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+    document.querySelector('header').style.marginTop = `${navbarHeight}px`;
+};
+
+

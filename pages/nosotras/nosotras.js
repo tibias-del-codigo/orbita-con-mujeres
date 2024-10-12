@@ -18,6 +18,24 @@ const linkedinButtons = document.querySelectorAll('.btn-primary');
 applyHoverEffect(navItems);
 applyHoverEffect(linkedinButtons);
 
+
+//=====   AJUSTE DE TAMAÑO RESPONSIVE DE LA BARRA LATERAL  ============
+
+function adjustOffcanvasWidth() {
+    const offcanvas = document.querySelector(".offcanvas");
+
+    if (window.innerWidth <= 768) {
+        offcanvas.style.width = "50%";
+    } else if (window.innerWidth >= 1000) {
+        offcanvas.style.width = "30%";
+    }
+}
+
+window.onload = function() {
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+    document.querySelector('header').style.marginTop = `${navbarHeight}px`;
+};
+
 //======   AJUSTE DE TAMAÑO RESPONSIVE DEL HEADER   ============
 
 window.addEventListener("resize", ajusteDeTamanioDeHeader);
@@ -44,18 +62,6 @@ function ajusteDeTamanioDeHeader() {
 }
 ajusteDeTamanioDeHeader();
 
-//=====   AJUSTE DE TAMAÑO RESPONSIVE DE LA BARRA LATERAL  ============
-
-function adjustOffcanvasWidth() {
-    const offcanvas = document.querySelector(".offcanvas");
-
-    if (window.innerWidth <= 768) {
-        offcanvas.style.width = "50%";
-    } else if (window.innerWidth >= 1000) {
-        offcanvas.style.width = "30%";
-    }
-}
-
 window.addEventListener("load", adjustOffcanvasWidth);
 window.addEventListener("resize", adjustOffcanvasWidth);
 
@@ -80,13 +86,3 @@ function adjustSpacing() {
 window.addEventListener('load', adjustSpacing);
 window.addEventListener('resize', adjustSpacing);
 
-
-
-
-
-
-
-window.onload = function() {
-    const navbarHeight = document.querySelector('.navbar').offsetHeight;
-    document.querySelector('header').style.marginTop = `${navbarHeight}px`;
-};

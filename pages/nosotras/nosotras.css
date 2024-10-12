@@ -11,6 +11,13 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,243,243,1) 5
 
 /* ====== BARRA DE NAVEGACION ====== */
 
+#logo-barra-fija {
+    max-width: 50px;  
+    height: auto;    
+    object-fit: contain; 
+    margin-left: 10px; 
+}
+
 /* parte 1 de la animacion para que los botones aparezcan suavemente */
 .offcanvas.show .nav-item {
     opacity: 1;

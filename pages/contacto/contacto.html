@@ -30,48 +30,54 @@
 <body>
 
     <header>
-        <!-- ******************BARRA DE NAVEGACION********************* -->
-        <nav class="navbar fixed-top" style="background-color: transparent; border: none;">
-            <div class="container-fluid">
-                <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li>
-                                <div>
-                                    <img id="logo" src="../../assets/Logo-01.png" alt="logo">
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Perfil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Feed</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Tablero</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Ajustes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Nosotras</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
+    <!-- ******************BARRA DE NAVEGACION********************* -->
+    <nav class="navbar bg-body-tertiary fixed-top" style="border: none;">
+        <div class="container-fluid">
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="d-flex align-items-center ms-auto">
+                <img id="logo-barra-fija" src="../../assets/Logo-01.png" alt="logo">
+            </div>
+
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="navbar-buttons">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li>
+                            <div>
+                                <img id="logo" src="../../assets/Logo-01.png" alt="logo">
+                            </div>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" aria-current="page" href="../../pages/perfil/perfil.html">Perfil</a>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" href="../../pages/feed/feed.html">Feed</a>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" href="../../pages/tablero/tablero.html">Tablero</a>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" href="../../pages/ajustes/ajustes.html">Ajustes</a>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" href="../../pages/nosotras/nosotras.html">Nosotras</a>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" href="../../pages/contacto/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
         <!-- ******************ENCABEZADO ********************* -->
         <section>
             <div class="header-pagina container-lg custom-container">

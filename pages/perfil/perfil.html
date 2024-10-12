@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font: Montserrat -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;600&display=swap" rel="stylesheet">
+    <!-- Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font: Style Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/Logo-01.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- ******************BARRA DE NAVEGACION********************* -->
+    <nav class="navbar bg-body-tertiary fixed-top" style="border: none;">
+        <div class="container-fluid">
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="d-flex align-items-center ms-auto">
+                <img id="logo-barra-fija" src="../../assets/Logo-01.png" alt="logo">
+            </div>
+
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="navbar-buttons">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li>
+                            <div>
+                                <img id="logo" src="../../assets/Logo-01.png" alt="logo">
+                            </div>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" aria-current="page" href="../../pages/perfil/perfil.html">Perfil</a>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" href="../../pages/feed/feed.html">Feed</a>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" href="../../pages/tablero/tablero.html">Tablero</a>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" href="../../pages/ajustes/ajustes.html">Ajustes</a>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" href="../../pages/nosotras/nosotras.html">Nosotras</a>
+                        </li>
+                        <li class="nav-item boton-barra-navegacion">
+                            <a class="nav-link" href="../../pages/contacto/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="en-progreso" class="container-lg container-md container-sm text-center">
+            <p>Pagina de Perfil en progreso..</p>
+            <img src="../../assets/fotos/en-progreso.jpg" alt="">
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="perfil.js"></script>
+    </body>
+</html>

@@ -1,10 +1,74 @@
-/* ====== BARRA DE NAVEGACION ====== */
-#logo-barra-fija {
-    max-width: 50px;  
-    height: auto;    
-    object-fit: contain; 
-    margin-left: 10px; 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
 }
+/***** CUADRO DE CONTACTO *****/
+.form-control{
+    background: rgba(255, 255, 255, 0.829);
+}
+
+.datos-contacto>textarea#Mensaje {
+    height: 250px;
+    resize: none;
+    border-radius: 20px;
+}
+
+#box-contacto{
+    background: #FFD169;
+    box-shadow: 0 0 10px 40px #FFD169;
+    font-family: "Poppins", sans-serif;
+  /*  font-family: "Montserrat", sans-serif;   */
+}
+
+.btn{
+    background: #E54875;
+    font-size: 20px;
+    width: 200px;
+
+}
+
+.btn:hover {
+    background-color: #E54875;
+}
+
+
+/***** TITULO *****/
+
+/* Estilos del contenedor*/
+.custom-container {
+    width: 100%;
+    padding: 35px 0;
+    margin: 50px auto !important; 
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.header-pagina {
+    background: linear-gradient(to bottom, #a8f57a, #ffffff);
+    text-align: center;
+}
+
+/* Estilo del texto */
+.title {
+    font-size: 11em;
+    font-family: "Style Script", cursive;
+    color: white; 
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/***** BARRA DE NAVEGACION  *****/
 
 /* parte 1 de la animacion para que los botones aparezcan suavemente */
 .offcanvas.show .nav-item {
@@ -18,9 +82,9 @@
     margin-bottom: 10px;
 }
 
- /* Color y tamaño de la barra de navegacion */
+/* Color y tamaño de la barra de navegacion */
 .offcanvas {
-    background-color: #eee9af;
+    background-color: #EEE9AF;
     height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
@@ -37,6 +101,7 @@
 }
 
 /* Estilos para cada boton de la barra de navegacion */
+
 .nav-item {
     display: flex;
     justify-content: center;
@@ -63,28 +128,191 @@
 } 
 
 .nav-item:hover {
-    background-color: #7a8937;
-    font-weight: 500;
+    background-color: #7A8937;
+    font-weight:500 ;
 }
 
-.nav-item a:hover {
+.nav-item a:hover{
     color: white;
 }
 
 #logo {
     display: flex;
-    width: 6em;
-    height: 6em;
+    width: 10em;
+    height: 10em;
     margin: 0 auto;
-    margin-top: 0;
     background: transparent;
+    margin-top: 10vh;
 }
 
-/* EN PROGRESO */
-main {
+/* Sección de etiquetas */
+.tags-section {
+    margin-bottom: 20px;
+}
+
+.tag-button {
+    background-color: #ffffff;
+    border: 1px solid #7A8937;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins";
+}
+
+.tag-button:hover {
+    background-color: #7A8937;
+    color: white;
+}
+
+/* Sección de nuevo post */
+.section-new-post{
+    margin: 35px;
+}
+
+.new-post {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: auto;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center;     /* Centrar verticalmente */
-    height: 100vh;           /* Altura completa del viewport */
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    position:relative ;
+}
+
+/* Contenedor para la imagen de perfil y el input+botón */
+.post-header {
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    margin-bottom: 15px; 
+}
+
+.profile-pic-status-bar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px; 
+}
+
+/* Contenedor del input y botón publicar */
+.input-publish-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-post {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-right: 10px; 
+}
+
+/* Botón Publicar */
+.publish-button {
+    background-color: #e7e7e7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 0 20px;
+}
+
+.publish-button:hover {
+    background-color: #E54875; 
+    color: white;
+}
+
+/* header */
+.custom-container {
+    width: 100%;
+    padding: 35px 0;
+    margin: 80px auto !important; 
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.header-pagina {
+    background: rgb(33, 145, 117);
+    background: linear-gradient(180deg,rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    margin-bottom: 10px ;
+}
+
+.title {
+    font-size: 11em;
+    font-family: "Style Script", cursive;
+    color: white;
     text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Posiciona las imágenes de flores en el header de manera absoluta en la esquina inferior derecha y les da un tamaño fijo, con una transición suave para cambios */
+.header-flowers img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 16em;
+    width: 16em;
+    transition: all 0.3s ease;
+    max-width: 100%;
+    z-index: 1;
+}
+
+/* publicaciónes */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.user {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Poppins";
+}
+
+.text {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Estamos en proceso de errores CARDS */
+
+.card {
+    font-family: "Montserrat", sans-serif;
+}
+
+.user{
+    font-family: "Poppins";
 }

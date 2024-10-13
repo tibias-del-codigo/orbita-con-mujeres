@@ -145,6 +145,54 @@
     margin-top: 10vh;
 }
 
+/***** CSS HEADER *****/
+
+/* Estilos del contenedor personalizado, ancho completo, centrado y con relleno. Alinea su contenido en el centro de forma vertical y horizontal */
+.custom-container {
+    width: 100%;
+    padding: 35px 0;
+    margin: 80px auto !important; 
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.header-pagina {
+    background: rgb(33, 145, 117);
+    background: linear-gradient(180deg,rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    margin-bottom: 10px ;
+}
+
+.title {
+    font-size: 11em;
+    font-family: "Style Script", cursive;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Posiciona las imágenes de flores en el header de manera absoluta en la esquina inferior derecha y les da un tamaño fijo, con una transición suave para cambios */
+.header-flowers img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 16em;
+    width: 16em;
+    transition: all 0.3s ease;
+    max-width: 100%;
+    z-index: 1;
+}
+
+
+
+
+
 /* Sección de etiquetas */
 .tags-section {
     margin-bottom: 20px;

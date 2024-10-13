@@ -1,86 +1,25 @@
-/* ====== BARRA DE NAVEGACION ====== */
-
-#logo-barra-fija {
-    max-width: 50px;  
-    height: auto;    
-    object-fit: contain; 
-    margin-left: 10px; 
-}
-
-/* parte 1 de la animacion para que los botones aparezcan suavemente */
-.offcanvas.show .nav-item {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.navbar {
-    background-color: #eee9af !important; /* Cambia el color aquí */
-    border: none;
-    margin-bottom: 10px;
-}
-
- /* Color y tamaño de la barra de navegacion */
-.offcanvas {
-    background-color: #eee9af;
-    height: 100vh;
-    max-height: 100vh;
-    overflow-y: auto;
-}
-
-.bg-body-tertiary {
-    background-color: #eee9af;
-}
-
-.offcanvas-body ul {
-    padding: 0;
-    margin: 0;
-    flex-grow: 1;
-}
-
-/* Estilos para cada boton de la barra de navegacion */
-.nav-item {
+/* EN PROGRESO */
+main {
     display: flex;
-    justify-content: center;
-    background-color: white;
-    margin: 0.3em;
-    border-radius: 30px;
-    font-size: 1.5em;
-    font-family: "Poppins";
-    /* parte 2 de la animacion para que los botones aparezcan suavemente */
-    opacity: 0; 
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-/* Hace que el enlace se centre en el list item de la barra de navegacion */
-.nav-item a {
-    display: block; 
-    width: 100%;
-    height: 100%;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;     /* Centrar verticalmente */
+    height: 100vh;           /* Altura completa del viewport */
     text-align: center;
-    padding: 10px;
-    color: initial; 
-    text-decoration: none;
-} 
-
-.nav-item:hover {
-    background-color: #7a8937;
-    font-weight: 500;
 }
 
-.nav-item a:hover {
-    color: white;
+img {
+    width: 100%;
 }
 
-#logo {
-    display: flex;
-    width: 6em;
-    height: 6em;
-    margin: 0 auto;
-    margin-top: 0;
-    background: transparent;
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el scroll horizontal */
 }
 
+.container {
+    max-width: 100%; /* Asegúrate de que el contenedor no sobrepase el ancho */
+}
 /* EN PROGRESO */
 main {
     display: flex;

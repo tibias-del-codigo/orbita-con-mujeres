@@ -1,0 +1,30 @@
+:root {
+    /* color de fondo */
+    --body-bg-color: #f2f2f2;
+
+    /* Barra de Navegación */
+    /* Color de barra de navegacion */
+    --navbar-bg-color: #eee9af;
+    /* texto en navegacion*/
+    --navText-color: black;
+    /* boton  en navegacion*/
+    --navHovBut-bg-color: white;
+    /* texto una vez realizado el hover en navegacion*/
+    --navHovText-color: white;
+    /* boton una vez realizado el hover en navegacion*/
+    --navHovBut-bg-color: #7a8937;
+
+    /* boton rosa */
+    --butPink-bg-color: #E54875;
+    /* texto del boton rosa */
+    --butPText-color:white;
+
+    /* Header */
+    --headerText-color:white;
+
+    --header-bg-color:{
+        rgb(33, 145, 117);
+        background: linear-gradient(180deg,rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    /* verificar la manera correcta  */
+    }
+}

@@ -5,6 +5,10 @@
     box-sizing: border-box;
     
 }
+
+body {
+    background-color: #f2f2f2;
+}
 /***** CUADRO DE CONTACTO *****/
 .form-control{
     background: rgba(255, 255, 255, 0.829);

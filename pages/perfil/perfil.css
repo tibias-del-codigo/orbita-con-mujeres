@@ -2,33 +2,87 @@ body {
     background-color: #f2f2f2;
 }
 
-/* EN PROGRESO */
-main {
+/***** CSS HEADER *****/
+
+/* Estilos del contenedor personalizado, ancho completo, centrado y con relleno. Alinea su contenido en el centro de forma vertical y horizontal */
+.custom-container {
+    width: 100%;
+    height: 290px;
+    padding: 35px 0;
+    margin-top: 80px;
+    box-sizing: border-box;
+    position: relative;
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center;     /* Centrar verticalmente */
-    height: 100vh;           /* Altura completa del viewport */
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.header-pagina {
+    background: rgb(33, 145, 117);
+    background: linear-gradient(180deg,rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    margin-bottom: 10px ;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 11em;
+    font-family: "Style Script", cursive;
+    color: white;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
-img {
-    width: 300px;
+/* Posiciona las imágenes de flores en el header de manera absoluta en la esquina inferior derecha y les da un tamaño fijo, con una transición suave para cambios */
+.header-flowers img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 16em;
+    width: 16em;
+    transition: all 0.3s ease;
+    max-width: 100%;
+    z-index: 1;
 }
 
-body, html {
-    margin: 0;
+/* ======= FOTO DE PERFIL ======== */
+
+.foto-perfil-container {
+    display: flex; /* Flexbox para alinear horizontalmente */
+    align-items: center; /* Alinear verticalmente al centro */
+    position: relative;
+    justify-content: flex-start;
+    z-index: 2;
+    margin-top: -50px;
+    justify-content: flex-start; /* Asegura que los elementos estén alineados a la izquierda */
+    padding: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.foto-perfil img{
+    height: 200px;
+    border-radius: 50%;
+    margin-top: -80px;
     padding: 0;
-    overflow-x: hidden; /* Evita el scroll horizontal */
+    position: relative;
+    z-index: 2;
+    display: flex;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border: 4px solid #f2f2f2;
 }
 
-.container {
-    max-width: 100%; /* Asegúrate de que el contenedor no sobrepase el ancho */
-}
-/* EN PROGRESO */
-main {
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center;     /* Centrar verticalmente */
-    height: 100vh;           /* Altura completa del viewport */
-    text-align: center;
+.nombre-usuario {
+    margin-left: 15px; /* Espacio entre la foto de perfil y el nombre */
+    font-size: 1.5rem;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    color: #333;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra negra */
 }

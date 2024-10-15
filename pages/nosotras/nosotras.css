@@ -1,5 +1,38 @@
+:root {
+    /* color de fondo */
+    --body-bg-color: #f2f2f2;
+    /* cuadros de imput ,lenado de informacion */
+    --input-bg-color: rgba(255, 255, 255, 0.829);
+    /* caja de formulario de contacto */
+    --boxform-bg-color: #FFD169;
+    /* Barra de Navegación */
+    /* Color de barra de navegacion */
+    --navbar-bg-color: #eee9af;
+    /* texto en navegacion*/
+    --navText-color: black;
+    /* boton  en navegacion*/
+    --navBut-bg-color: white;
+    /* texto una vez realizado el hover en navegacion*/
+    --textWhite-color: white;
+    /* boton una vez realizado el hover en navegacion*/
+    --navHovBut-bg-color: #7a8937;
+    /* botones rosa */
+    --butPink-bg-color: #E54875;
+     /* Header*/
+     /* Fondo de título */
+    --header-bg-color: linear-gradient(180deg, rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    /* Header de pagina gradiente */
+    --headerPage-bg-color: linear-gradient(to bottom, #a8f57a, #f2f2f2);
+    /* Botón Publicar */
+    --pubBut-bg-color:#e7e7e7;
+    /* Gris oscuro */
+    --lineD-color:#ddd;
+    /* Tecxto de Usuario */
+    --textUsuario-color: #333;
+}
+
 body {
-    background-color: #f2f2f2;
+    background-color:var(--body-bg-color);
 }
 
 * {
@@ -10,7 +43,9 @@ body {
 
 /***** CSS HEADER *****/
 
-/* Estilos del contenedor personalizado, ancho completo, centrado y con relleno. Alinea su contenido en el centro de forma vertical y horizontal */
+/***** TITULO *****/
+
+/* Estilos del contenedor*/
 .custom-container {
     width: 100%;
     padding: 35px 0;
@@ -26,21 +61,21 @@ body {
 }
 
 .header-pagina {
-    background: rgb(33, 145, 117);
-    background: linear-gradient(180deg,rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    background: var(--header-bg-color);
     margin-bottom: 10px ;
 }
-
+/* Estilo del texto */
 .title {
     font-size: 11em;
     font-family: "Style Script", cursive;
-    color: white;
+    color: var(--textWhite-color); 
     text-align: center;
     position: relative;
     z-index: 2;
 }
 
-/* Posiciona las imágenes de flores en el header de manera absoluta en la esquina inferior derecha y les da un tamaño fijo, con una transición suave para cambios */
+/* Posiciona las imágenes de flores en el header */
+
 .header-flowers img {
     position: absolute;
     bottom: 0;
@@ -63,14 +98,14 @@ body {
  .descpripcion-pagina {
     font-family: "Montserrat", sans-serif; 
     font-size: 1.2rem; 
-    color: #333;
+    color: var(--textUsuario-color);
     line-height: 1.6;  
     text-align: justify;  
     margin: 10px auto;  
     margin-bottom: 30px;
     padding: 15px 20px; 
     background-color: #f9f9f9; 
-    border-left: 4px solid #7a8937; 
+    border-left: 4px solid var(--navHovBut-bg-color); 
     border-radius: 10px; 
     max-width: 800px;  
 }
@@ -112,7 +147,7 @@ body {
     font-weight: bold;
     font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
-    color: black;
+    color: var(--navText-color);
     background-color: #f1f1f1;
     margin: 0 auto;
     width: 80%;
@@ -123,7 +158,7 @@ body {
     font-weight: bold;
     font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
-    color: black;
+    color: var(--navText-color);
     background-color: #f1f1f1;
     padding: 10px 20px;
     border-radius: 50px;
@@ -140,7 +175,7 @@ body {
 .tarjeta_descripcion {
     font-size: 0.9rem;
     font-family: "Montserrat", sans-serif;
-    color: #000000;
+    color: var(--navText-color);
 }
 
 /* Degradados tarjetas */

@@ -1,5 +1,39 @@
+:root {
+    /* color de fondo */
+    --body-bg-color: #f2f2f2;
+    /* cuadros de imput ,lenado de informacion */
+    --input-bg-color: rgba(255, 255, 255, 0.829);
+    /* caja de formulario de contacto */
+    --boxform-bg-color: #FFD169;
+    /* Barra de Navegación */
+    /* Color de barra de navegacion */
+    --navbar-bg-color: #eee9af;
+    /* texto en navegacion*/
+    --navText-color: black;
+    /* boton  en navegacion*/
+    --navBut-bg-color: white;
+    /* texto una vez realizado el hover en navegacion*/
+    --textWhite-color: white;
+    /* boton una vez realizado el hover en navegacion*/
+    --navHovBut-bg-color: #7a8937;
+    /* botones rosa */
+    --butPink-bg-color: #E54875;
+     /* Header*/
+     /* Fondo de título */
+    --header-bg-color: linear-gradient(180deg, rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    /* Header de pagina gradiente */
+    --headerPage-bg-color: linear-gradient(to bottom, #a8f57a, #f2f2f2);
+    /* Botón Publicar */
+    --pubBut-bg-color:#e7e7e7;
+    /* Gris oscuro */
+    --lineD-color:#ddd;
+    /* Tecxto de Usuario */
+    --textUsuario-color: #333;
+    
+}
+
 body {
-    background-color: #f2f2f2;
+    background-color: var(--body-bg-color);
 }
 
 * {
@@ -8,35 +42,6 @@ body {
     box-sizing: border-box;
     
 }
-/***** CUADRO DE CONTACTO *****/
-.form-control{
-    background: rgba(255, 255, 255, 0.829);
-}
-
-.datos-contacto>textarea#Mensaje {
-    height: 250px;
-    resize: none;
-    border-radius: 20px;
-}
-
-#box-contacto{
-    background: #FFD169;
-    box-shadow: 0 0 10px 40px #FFD169;
-    font-family: "Poppins", sans-serif;
-  /*  font-family: "Montserrat", sans-serif;   */
-}
-
-.btn{
-    background: #E54875;
-    font-size: 20px;
-    width: 200px;
-
-}
-
-.btn:hover {
-    background-color: #E54875;
-}
-
 
 /***** TITULO *****/
 
@@ -55,7 +60,7 @@ body {
 }
 
 .header-pagina {
-    background: linear-gradient(to bottom, #a8f57a, #ffffff);
+    background: var(--headerPage-bg-color);
     text-align: center;
 }
 
@@ -63,7 +68,7 @@ body {
 .title {
     font-size: 11em;
     font-family: "Style Script", cursive;
-    color: white; 
+    color: var(--headerText-color); 
     text-align: center;
     position: relative;
     z-index: 2;
@@ -76,8 +81,8 @@ body {
 }
 
 .tag-button {
-    background-color: #ffffff;
-    border: 1px solid #7A8937;
+    background-color: var(--navBut-bg-color);
+    border: 1px solid var(--navHovBut-bg-color);
     border-radius: 30px;
     margin: 10px;
     padding: 10px 20px;
@@ -87,8 +92,8 @@ body {
 }
 
 .tag-button:hover {
-    background-color: #7A8937;
-    color: white;
+    background-color: var(--navHovBut-bg-color);
+    color: var(--navBut-bg-color);
 }
 
 /* Sección de nuevo post */
@@ -97,7 +102,7 @@ body {
 }
 
 .new-post {
-    background-color: #ffffff;
+    background-color: var(--navBut-bg-color);
     padding: 20px;
     margin: auto;
     width: 100%;
@@ -135,7 +140,7 @@ body {
 .input-post {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--lineD-color);
     border-radius: 20px;
     font-size: 16px;
     margin-right: 10px; 
@@ -143,7 +148,7 @@ body {
 
 /* Botón Publicar */
 .publish-button {
-    background-color: #e7e7e7;
+    background-color: var(--pubBut-bg-color);
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -153,8 +158,8 @@ body {
 }
 
 .publish-button:hover {
-    background-color: #E54875; 
-    color: white;
+    background-color: var(--butPink-bg-color); 
+    color: var(--textWhite-color);
 }
 
 /* Botones Foto/Video y Sentimiento/Actividad */
@@ -172,7 +177,7 @@ margin-right: 5px;
 
 .media-button,
 .activity-button {
-    background-color: #e7e7e7;
+    background-color: var(--pubBut-bg-color);
     border: none;
     padding: 10px;
     border-radius: 20px;
@@ -182,8 +187,8 @@ margin-right: 5px;
 
 .media-button:hover,
 .activity-button:hover {
-    background-color: #7A8937;
-    color: white;
+    background-color: var(--navHovBut-bg-color);
+    color: var(--textWhite-color);
 }
 
 /* publicaciónes */
@@ -196,8 +201,8 @@ margin-right: 5px;
 }
 
 .card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    background-color: var(--navBut-bg-color);
+    border: 1px solid var(--lineD-color);
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -216,7 +221,7 @@ margin-right: 5px;
 
 .text {
     margin-top: 10px;
-    color: #333;
+    color: var(--textUsuario-color);
 }
 
 /* Estamos en proceso de errores CARDS */

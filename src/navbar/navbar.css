@@ -1,3 +1,36 @@
+:root {
+    /* color de fondo */
+    --body-bg-color: #f2f2f2;
+    /* cuadros de imput ,lenado de informacion */
+    --input-bg-color: rgba(255, 255, 255, 0.829);
+    /* caja de formulario de contacto */
+    --boxform-bg-color: #FFD169;
+    /* Barra de Navegación */
+    /* Color de barra de navegacion */
+    --navbar-bg-color: #eee9af;
+    /* texto en navegacion*/
+    --navText-color: black;
+    /* boton  en navegacion*/
+    --navBut-bg-color: white;
+    /* texto una vez realizado el hover en navegacion*/
+    --textWhite-color: white;
+    /* boton una vez realizado el hover en navegacion*/
+    --navHovBut-bg-color: #7a8937;
+    /* botones rosa */
+    --butPink-bg-color: #E54875;
+     /* Header*/
+     /* Fondo de título */
+    --header-bg-color: linear-gradient(180deg, rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    /* Header de pagina gradiente */
+    --headerPage-bg-color: linear-gradient(to bottom, #a8f57a, #f2f2f2);
+    /* Botón Publicar */
+    --pubBut-bg-color:#e7e7e7;
+    /* Gris oscuro */
+    --lineD-color:#ddd;
+    /* Tecxto de Usuario */
+    --textUsuario-color: #333;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,21 +53,21 @@
 }
 
 .navbar {
-    background-color: #eee9af !important; /* Cambia el color aquí */
+    background-color: var(--navbar-bg-color) !important; /* Cambia el color aquí */
     border: none;
     margin-bottom: 10px;
 }
 
  /* Color y tamaño de la barra de navegacion */
 .offcanvas {
-    background-color: #eee9af;
+    background-color: var(--navbar-bg-color);
     height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
 }
 
 .bg-body-tertiary {
-    background-color: #eee9af;
+    background-color: var(--navbar-bg-color);
 }
 
 .offcanvas-body ul {
@@ -47,7 +80,7 @@
 .nav-item {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: var(--navBut-bg-color);
     margin: 0.3em;
     border-radius: 30px;
     font-size: 1.5em;
@@ -70,12 +103,12 @@
 } 
 
 .nav-item:hover {
-    background-color: #7a8937;
+    background-color: var(--navHovBut-bg-color);
     font-weight: 500;
 }
 
 .nav-item a:hover {
-    color: white;
+    color: var(--textWhite-color);
 }
 
 #logo {
@@ -86,4 +119,3 @@
     margin-top: 0;
     background: transparent;
 }
-

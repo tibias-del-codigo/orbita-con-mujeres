@@ -1,5 +1,30 @@
+:root {
+    /* color de fondo */
+    --body-bg-color: #f2f2f2;
+    /* cuadros de imput ,lenado de informacion */
+    --input-bg-color: rgba(255, 255, 255, 0.829);
+    /* caja de formulario de contacto */
+    --boxform-bg-color: #FFD169;
+    /* Barra de Navegación */
+    /* Color de barra de navegacion */
+    --navbar-bg-color: #eee9af;
+    /* texto en navegacion*/
+    --navText-color: black;
+    /* boton  en navegacion*/
+    --navBut-bg-color: white;
+    /* texto una vez realizado el hover en navegacion*/
+    --textWhite-color: white;
+    /* boton una vez realizado el hover en navegacion*/
+    --navHovBut-bg-color: #7a8937;
+     /* botones rosa */
+    --butPink-bg-color: #E54875;
+    /* Header*/
+    /* Fondo de título */
+    --header-bg-color: linear-gradient(180deg, rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+}
+
 body {
-    background-color: #f2f2f2;
+    background-color: var(--body-bg-color);
 }
 
 * {
@@ -10,7 +35,7 @@ body {
 }
 /***** CUADRO DE CONTACTO *****/
 .form-control{
-    background: rgba(255, 255, 255, 0.829);
+    background: var(--input-bg-color);
 }
 
 .datos-contacto>textarea#Mensaje {
@@ -20,21 +45,21 @@ body {
 }
 
 #box-contacto{
-    background: #FFD169;
-    box-shadow: 0 0 10px 40px #FFD169;
+    background: var(--boxform-bg-color);
+    box-shadow: 0 0 10px 40px var(--boxform-bg-color);
     font-family: "Poppins", sans-serif;
   /*  font-family: "Montserrat", sans-serif;   */
 }
 
 .btn{
-    background: #E54875;
+    background: var(--butPink-bg-color);
     font-size: 20px;
     width: 200px;
 
 }
 
 .btn:hover {
-    background-color: #E54875;
+    background-color: var(--butPink-bg-color);
 }
 
 
@@ -56,15 +81,14 @@ body {
 }
 
 .header-pagina {
-    background: rgb(33, 145, 117);
-    background: linear-gradient(180deg,rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+       background: var(--header-bg-color);
     margin-bottom: 10px ;
 }
 /* Estilo del texto */
 .title {
     font-size: 11em;
     font-family: "Style Script", cursive;
-    color: white; 
+    color: var(--textWhite-color); 
     text-align: center;
     position: relative;
     z-index: 2;
@@ -99,21 +123,21 @@ body {
 }
 
 .navbar {
-    background-color: #eee9af !important; /* Cambia el color aquí */
+    background-color: var(--navbar-bg-color) !important; /* Cambia el color aquí */
     border: none;
     margin-bottom: 10px;
 }
 
  /* Color y tamaño de la barra de navegacion */
 .offcanvas {
-    background-color: #eee9af;
+    background-color: var(--navbar-bg-color);
     height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
 }
 
 .bg-body-tertiary {
-    background-color: #eee9af;
+    background-color: var(--navbar-bg-color);
 }
 
 .offcanvas-body ul {
@@ -126,7 +150,7 @@ body {
 .nav-item {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: var(--navBut-bg-color);
     margin: 0.3em;
     border-radius: 30px;
     font-size: 1.5em;
@@ -149,12 +173,12 @@ body {
 } 
 
 .nav-item:hover {
-    background-color: #7a8937;
+    background-color: var(--navHovBut-bg-color);
     font-weight: 500;
 }
 
 .nav-item a:hover {
-    color: white;
+    color: var(--textWhite-color);
 }
 
 #logo {
@@ -165,3 +189,4 @@ body {
     margin-top: 0;
     background: transparent;
 }
+

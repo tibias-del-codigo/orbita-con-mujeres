@@ -1,0 +1,29 @@
+{
+  "name": "orbita-con-mujeres",
+  "version": "1.0.0",
+  "description": "Red social para mujeres mexicanas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tibias-del-codigo/orbita-con-mujeres.git"
+  },
+  "keywords": [
+    "red",
+    "social",
+    "mujeres",
+    "orbita"
+  ],
+  "author": "Tibias DelCodigo\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D Codigo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tibias-del-codigo/orbita-con-mujeres/issues"
+  },
+  "homepage": "https://github.com/tibias-del-codigo/orbita-con-mujeres#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1"
+  }
+}

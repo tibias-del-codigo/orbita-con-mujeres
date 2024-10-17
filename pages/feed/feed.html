@@ -96,13 +96,13 @@
                 <div class="post-header container-lg">
                     <img src="/assets/fotos/TIBIO.jpeg" alt="Perfil" class="profile-pic-status-bar">
                     <div class="input-publish-container">
-                        <input type="text" placeholder="¿Qué estás pensando?" class="input-post">
-                        <button class="publish-button">Publicar</button>
+                        <input type="text" id="postText" placeholder="¿Qué estás pensando?" class="input-post">
+                        <button class="publish-button" onclick="publishPost()">Publicar</button>
                     </div>
                 </div>
 
                 <div class="post-options container-lg">
-                    <button class="media-button"><i class="bi bi-images "></i> Foto/video</button>
+                    <input class="media-button" type="file" id="postImage" accept="image/*"> <!-- <i class="bi bi-images "></i> -->
                     <button class="activity-button"><i class=" carita-feliz bi bi-emoji-wink"></i>Sentimiento/actividad</button>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                     </div>
                 </div>
 
-                    <div class="col-sm-6 col-lg-4 mb-4">
+                    <!-- <div class="col-sm-6 col-lg-4 mb-4">
                         <div class="card">
                             <img src="" alt="">
                             <div class="d-flex text-body-secondary pt-3 p-2">
@@ -148,9 +148,9 @@
                             </p>
                           </div>
                         </div>
-                    </div>
+                    </div> -->
                 
-                    <div class="col-sm-6 col-lg-4 mb-4">
+                   <!--  <div class="col-sm-6 col-lg-4 mb-4">
                         <div class="card">
                             <img src="/orbita-con-mujeres/assets/fotos/TIBIO.jpeg" alt="">
                             <div class="d-flex text-body-secondary pt-3">
@@ -243,8 +243,7 @@
                                     </p>
                                   </div>
                                 </div>
-                            </div>
-
+                            </div>-->
             </div>
                 
         </section>
@@ -259,7 +258,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-    <script src="contacto.js"></script>
+    <script src="feed.js"></script>
+    <script src="../../server.js"></script>
     <script src="../../src/navbar/navbar.js"></script>
 </body>
 

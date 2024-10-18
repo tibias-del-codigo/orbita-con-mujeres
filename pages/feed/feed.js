@@ -1,5 +1,22 @@
 let posts = [];
 
+//SetUp que hicimos con SERCH
+function inicializarTarjetas () {
+const datosDeLocalStorage = localStorage.getItem("newPost");
+if (!datosDeLocalStorage) {
+    console.log("No tengo datos guardados");
+    //to do: hacer un fetch para el archivo json
+} else {
+    const publicaciones = JSON.parse(datosDeLocalStorage);
+    console.log("Yeiii, tenemos datos!!");
+    //to do: llamar a la funcion para mostrar los datos en la interfaz
+    console.log(publicaciones);
+} 
+
+}
+inicializarTarjetas();
+
+
 function publishPost() {
     const postTextInput = document.getElementById('postText');
     const postText = postTextInput.value; // Captura el texto del post
@@ -58,6 +75,7 @@ function displayPost(post) {
 function savePostsToJSON() {
     const jsonPosts = JSON.stringify(posts, null, 2);
     console.log('Publicaciones en JSON:', jsonPosts);
+    localStorage.setItem("newPost",jsonPosts); //Almacenar en localStorage
 }
 
 function clearInputs(textInput, imageInput) {

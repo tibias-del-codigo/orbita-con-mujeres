@@ -234,3 +234,20 @@ body {
     border-radius: 15px;
     box-shadow: none;
 }
+
+
+/* Hover Ilustraciones */
+
+
+.tarjeta_foto .foto-hover {
+    display: none;
+}
+
+
+.tarjeta_foto:hover .foto-normal {
+    display: none;
+}
+
+.tarjeta_foto:hover .foto-hover {
+    display: inline-block;
+}

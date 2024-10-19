@@ -1,86 +1,68 @@
-let posts = [];
 
-//SetUp que hicimos con SERCH
-function inicializarTarjetas () {
-const datosDeLocalStorage = localStorage.getItem("newPost");
-if (!datosDeLocalStorage) {
-    console.log("No tengo datos guardados");
-    //to do: hacer un fetch para el archivo json
-} else {
-    const publicaciones = JSON.parse(datosDeLocalStorage);
-    console.log("Yeiii, tenemos datos!!");
-    //to do: llamar a la funcion para mostrar los datos en la interfaz
-    console.log(publicaciones);
-} 
+// Initialize a new ItemsController with currentId set to 0
+const postController = new PostsController(0);
 
-}
-inicializarTarjetas();
+// Select the New Item Form
+const newPostForm = document.querySelector('#newPostForm');
 
 
-function publishPost() {
-    const postTextInput = document.getElementById('postText');
-    const postText = postTextInput.value; // Captura el texto del post
-    const postImageInput = document.getElementById('postImage');
-    let postImage = '';
+// Add an 'onsubmit' event listener
+newPostForm.addEventListener('submit', (event) => {
+    // Prevent default action
+    event.preventDefault();
 
-    if (postImageInput.files && postImageInput.files[0]) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            postImage = e.target.result;
-            addPost(postText, postImage);
-            // Limpiar los campos después de publicar
-            clearInputs(postTextInput, postImageInput);
-        };
-        reader.readAsDataURL(postImageInput.files[0]);
-    } else {
-        addPost(postText, postImage);
-        // Limpiar los campos después de publicar
-        clearInputs(postTextInput, postImageInput);
-    }
-}
+    // Select the inputs
+    //const newPostUser = document.querySelector('#newPostUser');
+    const newPostContent = document.querySelector('#postText');
+    const newPostImageUrl = document.querySelector('#postImage');    
 
-function addPost(text, image) {
-    const post = {
-        usuario: "@TibioElGuapo", // Puedes cambiar esto para que sea dinámico
-        texto: text,
-        imagen: image
-    };
+    // Get the values of the inputs
+    // const user = newPostUser.value;
+    const content = newPostContent.value;
 
-    posts.push(post);
-    displayPost(post);
-    savePostsToJSON();
-}
-
-function displayPost(post) {
-    const postsSection = document.querySelector('.row');
-    const postHTML = `
-        <div class="col-sm-6 col-lg-4 mb-4">
-            <div class="card">
-                ${post.imagen ? `<img src="${post.imagen}" alt="Post image">` : ''}
-                <div class="d-flex text-body-secondary pt-3 p-2">
-                    <img class="profile-pic-post" style="width: 50px; margin-right: 10px;" src="../../assets/fotos/TIBIO.jpeg" alt="Perfil">
-                    <div class="mb-0 small d-flex align-items-center border-bottom w-100">
-                        <strong class="user text-gray-dark">${post.usuario}</strong>
+    const createPostHTML = (content, imageUrl = '') => {
+        return `
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    ${imageUrl ? `<img src="${imageUrl}" alt="Post image">` : ''}
+                    <div class="d-flex text-body-secondary pt-3 p-2">
+                        <img class="profile-pic-post" style="width: 50px; margin-right: 10px;" src="../../assets/fotos/TIBIO.jpeg" alt="Perfil">
+                        <div class="mb-0 small d-flex align-items-center border-bottom w-100">
+                            <strong class="user text-gray-dark">@TibioElGuapo</strong>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">${content}</p>
                     </div>
                 </div>
-                <div class="card-body">
-                    <p class="card-text">${post.texto}</p>
-                </div>
             </div>
-        </div>
-    `;
-    postsSection.insertAdjacentHTML('beforeend', postHTML);
-}
+        `;
+    };
+       
+    const newCard = document.querySelector('.row');
 
-function savePostsToJSON() {
-    const jsonPosts = JSON.stringify(posts, null, 2);
-    console.log('Publicaciones en JSON:', jsonPosts);
-    localStorage.setItem("newPost",jsonPosts); //Almacenar en localStorage
-}
+    // Check if a file is selected and create a FileReader to read it
+    if (newPostImageUrl.files && newPostImageUrl.files[0]) {
+        const reader = new FileReader();
+        
+        reader.onload = function (e) {
+            const imageUrl = e.target.result; // Image as a base64 encoded URL
+            postController.addItem(content, imageUrl);
+            newCard.insertAdjacentHTML('beforeend', createPostHTML(content, imageUrl));
+        };
+        reader.readAsDataURL(newPostImageUrl.files[0]);
 
-function clearInputs(textInput, imageInput) {
-    // Limpiar el campo de texto
-    textInput.value = '';
-    // Limpiar el campo de imagen
-    imageInput.value = '';
-}
+    } else {
+        postController.addItem(content, ''); // No image provided
+        newCard.insertAdjacentHTML('beforeend', createPostHTML(content));
+    }
+    
+
+  // Clear the form
+    //newPostUser = '';
+    newPostContent.value = '';  
+    newPostImageUrl.value = ''; 
+
+});
+
+

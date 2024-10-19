@@ -88,29 +88,30 @@
             </div>
         </section>
     </header>
-
+<!--  -->
     <!-- ******************Nueva publicación********************* -->
     <main>
         <section class="section-new-post">
             <div class="new-post container-lg">
+                <form id="newPostForm">
                 <div class="post-header container-lg">
                     <img src="/assets/fotos/TIBIO.jpeg" alt="Perfil" class="profile-pic-status-bar">
                     <div class="input-publish-container">
                         <input type="text" id="postText" placeholder="¿Qué estás pensando?" class="input-post">
-                        <button class="publish-button" onclick="publishPost()">Publicar</button>
-                    </div>
+                        <button class="publish-button" type="submit" >Publicar</button>
+                    </div>  <!-- onclick="publishPost()" -->
                 </div>
 
                 <div class="post-options container-lg">
                     <input class="media-button" type="file" id="postImage" accept="image/*"> <!-- <i class="bi bi-images "></i> -->
-                    <button class="activity-button"><i class=" carita-feliz bi bi-emoji-wink"></i>Sentimiento/actividad</button>
+                    <button class="activity-button"></i>Menú desplegable para etiqueta</button> <!-- Pendiente  -->
                 </div>
+                </form>
             </div>
         </section>
 
         <!--Publicaciónes-->
         <section>
-       
             <div class="row" data-masonry='{"percentPosition": true }'>
                 <div class="col-sm-6 col-lg-4 mb-4">
                     <div class="card">
@@ -130,7 +131,6 @@
                       </div>
                     </div>
                 </div>
-
                     <!-- <div class="col-sm-6 col-lg-4 mb-4">
                         <div class="card">
                             <img src="" alt="">
@@ -258,8 +258,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="postController.js"></script>
     <script src="feed.js"></script>
-    <script src="../../server.js"></script>
     <script src="../../src/navbar/navbar.js"></script>
 </body>
 

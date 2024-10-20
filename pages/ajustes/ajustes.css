@@ -98,6 +98,7 @@ body {
     padding: 10px;
     margin-left: 150px;
     margin-right: 150px;
+    text-align: center; 
 }
 
 .foto-perfil img{
@@ -126,6 +127,27 @@ body {
     color: #333;
     white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra negra */
+}
+.cambiar-foto {
+    position: absolute;
+    top: 5px; /* Ajusta la posición vertical del símbolo */
+    right: 5px; /* Alinea el símbolo dentro del borde derecho de la foto */
+    background-color: #E54875; /* Color de fondo del símbolo */
+    color: white; /* Color del texto */
+    border-radius: 50%; /* Redondear el fondo */
+    width: 40px; /* Ancho del círculo */
+    height: 40px; /* Alto del círculo */
+    display: flex; /* Centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    font-size: 24px; /* Tamaño de la fuente */
+    font-weight: bold; 
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el símbolo */
+    transition: background-color 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.cambiar-foto:hover {
+    background-color: #c63c62; /* Cambia el color de fondo al pasar el mouse */
 }
 
 /* BOTONES DE EDITAR */
@@ -177,5 +199,47 @@ body {
 
 
 
-/* ===============FUNCIONALIDAD DE CAMBIAR IMAGENES============= */
+/* ===============EDITAR PERFIL============= */
+/* Borde y estilo del contenedor de ajustes */
+.contenedor-ajustes {
+    border: 2px solid black; /* Borde negro */
+    border-radius: 12px; /* Bordes redondeados */
+    background-color: #f8f9fa; /* Fondo claro */
+}
 
+/* Estilo de los botones */
+button {
+    background-color: #E54875;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+.d-flex .btn {
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
+button:hover {
+    background-color: #c63c62;
+}
+
+.guardar-cambios {
+    background-color: #E54875; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno (ajusta según sea necesario) */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    width: auto; /* Ajusta el ancho al contenido */
+    transition: background-color 0.3s ease; /* Efecto al pasar el mouse */
+    margin-top: 20px; /* Espaciado superior para separar del contenedor */
+}
+
+.guardar-cambios:hover {
+    background-color: #c63c62; /* Color al pasar el mouse */
+}

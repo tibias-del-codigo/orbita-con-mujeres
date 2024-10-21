@@ -31,15 +31,27 @@
     --textUsuario-color: #333;
 }
 
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evitar desplazamientos horizontales */
+}
+
 body {
     background-color: var(--body-bg-color);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100vw !important;
 }
 
 /***** CSS HEADER *****/
 
 /* Estilos del contenedor personalizado, ancho completo, centrado y con relleno. Alinea su contenido en el centro de forma vertical y horizontal */
+
 .custom-container {
-    width: 100%;
+    width: 100vw;
     height: 290px;
     padding: 35px 0;
     margin-top: 80px;
@@ -87,7 +99,7 @@ body {
     display: flex; /* Flexbox para alinear horizontalmente */
     align-items: center; /* Alinear verticalmente al centro */
     position: relative;
-    justify-content: flex-start;
+    justify-content: center;
     z-index: 2;
     margin-top: -50px;
     justify-content: flex-start; /* Asegura que los elementos estén alineados a la izquierda */
@@ -109,20 +121,35 @@ body {
 }
 
 .nombre-usuario {
-    margin-left: 15px; /* Espacio entre la foto de perfil y el nombre */
+    display: flex; /* Cambiar a inline-block para que el fondo se ajuste al contenido */
     font-size: 1.5rem;
     background-color: white;
     border-radius: 15px;
     padding: 10px;
-    color: #333;
-    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra negra */
-    width: 25%; 
+    white-space: nowrap; /* Evitar que el nombre se rompa en varias líneas */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
 }
- 
+
+
+.nombre-y-boton {
+    display: flex; /* Usar flexbox para alinear el nombre y el botón */
+    align-items: center; /* Alinear verticalmente */
+   /* Espacio a la izquierda del nombre para compensar el espacio de la imagen */
+}
+
+.btn-editar-perfil {
+    position: relative;
+    background-color: transparent;
+    color: var(--butPink-bg-color);
+    cursor: pointer; 
+    margin: 20px auto ;
+    margin-left: 15px;
+}
+
 
 /* Estilos para la tarjeta "Acerca de mí" */
-.card {
+.acerca-de-mi {
     background: linear-gradient(to bottom, #529e65 0%, #a5dca5, #eee9af 100%, #f1f1f1);
     border: none;
     border-radius: 10px;
@@ -172,4 +199,36 @@ body {
 .contenedor-derecho-uno h4,
 .contenedor-derecho-dos h4 {
     margin-bottom: 10px; 
+}
+
+.card {
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.user {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Poppins";
+}
+
+.text {
+    margin-top: 10px;
+    color: var(--textUsuario-color);
+}
+
+/* Estamos en proceso de errores CARDS */
+
+.card {
+    font-family: "Montserrat", sans-serif;
+}
+
+.user{
+    font-family: "Poppins";
 }

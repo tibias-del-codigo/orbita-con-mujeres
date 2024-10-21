@@ -31,8 +31,11 @@
     --textUsuario-color: #333;
 }
 
-body {
+html, body {
     background-color: var(--body-bg-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evitar desplazamientos horizontales */
 }
 
 /***** CSS HEADER *****/
@@ -119,14 +122,15 @@ body {
 }
 
 .nombre-usuario {
-    margin-left: 15px; /* Espacio entre la foto de perfil y el nombre */
+    display: inline-block; /* Cambiar a inline-block para que el fondo se ajuste al contenido */
+    margin-left: 15px;
     font-size: 1.5rem;
     background-color: white;
     border-radius: 15px;
     padding: 10px;
     color: #333;
-    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra negra */
+    white-space: nowrap; /* Evitar que el nombre se rompa en varias líneas */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .cambiar-foto {
     position: absolute;
@@ -230,16 +234,24 @@ button:hover {
 .guardar-cambios {
     background-color: #E54875; /* Color de fondo */
     color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 15px; /* Bordes redondeados */
     padding: 10px 20px; /* Espaciado interno (ajusta según sea necesario) */
     font-size: 16px; /* Tamaño de fuente */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    width: auto; /* Ajusta el ancho al contenido */
     transition: background-color 0.3s ease; /* Efecto al pasar el mouse */
-    margin-top: 20px; /* Espaciado superior para separar del contenedor */
+    margin-top: 3em; /* Espaciado superior para separar del contenedor */
+    width: 40%;
+    margin: 3em auto;
+
 }
 
 .guardar-cambios:hover {
-    background-color: #c63c62; /* Color al pasar el mouse */
+    background-color: #c63c62; 
+}
+
+.card-body .acerca-de-mi-card {
+    padding: 10px;
+    margin: 0;
+    width: 100% !important;
+    height: 350px;
 }

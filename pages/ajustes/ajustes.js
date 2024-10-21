@@ -1,67 +1,28 @@
-
-//======   AJUSTE DE TAMAÑO RESPONSIVE DEL HEADER   ============
-
-window.addEventListener("resize", ajusteDeTamanioDeHeader);
-
-function ajusteDeTamanioDeHeader() {
-    const title = document.querySelector(".title");
-    const image = document.querySelector(".header-flowers img");
-
-    const anchoDePantalla = window.innerWidth;
-
-    if (anchoDePantalla <= 750) {
-        title.style.fontSize = "4em";
-        image.style.width = "5em";
-        image.style.height = "5em";
-    } else if (anchoDePantalla > 750 && anchoDePantalla <= 1024) {
-        title.style.fontSize = "5em";
-        image.style.width = "6em";
-        image.style.height = "6em";
-        image.style.marginLeft = "3em"
-    } else {
-        title.style.fontSize = "11em";
-        image.style.width = "16em";
-        image.style.height = "16em";
-    }
-}
-ajusteDeTamanioDeHeader();
-
-
-
-/* RESPONSIVE DE FOTO DE PERFIL Y NOMBRE DE USUARIO */
-
 document.addEventListener('DOMContentLoaded', function () {
     function ajustarFotoPerfil() {
         const container = document.querySelector('.foto-perfil-container');
         const fotoPerfil = document.querySelector('.foto-perfil img');
         const nombreUsuario = document.querySelector('.nombre-usuario');
+        const anchoDePantalla = window.innerWidth;
 
-        if (window.innerWidth <= 768) {
+        if (anchoDePantalla <= 768) {
             // Ajustar estilos para pantallas móviles
-            container.style.display = 'flex';
             container.style.flexDirection = 'column'; // Alinea los elementos verticalmente
             container.style.alignItems = 'center'; // Centra los elementos horizontalmente
-            container.style.marginTop = '-60px';
-            
-            fotoPerfil.style.margin = '-50'; // Centra la imagen dentro del contenedor
+            container.style.marginTop = '-90px';
 
-            nombreUsuario.style.display = 'block'; // Para que el nombre esté debajo de la foto
-            nombreUsuario.style.marginLeft = '0';
-            nombreUsuario.style.marginTop = '10px';
+            fotoPerfil.style.margin = '0'; // Centra la imagen
             nombreUsuario.style.textAlign = 'center'; // Centra el texto del nombre
+            container.style.justifyContent = 'center'; // Alinea el contenedor al centro
+            fotoPerfil.style.marginTop = "-3em";
         } else {
             // Ajustar estilos para pantallas grandes
-            container.style.display = 'flex';
             container.style.flexDirection = 'row'; // Alinea los elementos horizontalmente
-            container.style.justifyContent = 'flex-start';
-            container.style.alignItems = 'center';
+            container.style.justifyContent = 'flex-start'; // Justifica a la izquierda
+            container.style.alignItems = 'center'; // Alinear verticalmente
             container.style.marginTop = '-60px';
-            
-            fotoPerfil.style.margin = '-30'; // Quita el centrado automático en pantallas grandes
+            fotoPerfil.style.marginTop = "-3em";
 
-            nombreUsuario.style.display = 'inline-block'; // Para que el nombre esté al lado de la foto
-            nombreUsuario.style.marginLeft = '15px';
-            nombreUsuario.style.marginTop = '40px';
             nombreUsuario.style.textAlign = 'left'; // Alinea el texto a la izquierda
         }
     }
@@ -70,6 +31,17 @@ document.addEventListener('DOMContentLoaded', function () {
     ajustarFotoPerfil();
     window.addEventListener('resize', ajustarFotoPerfil);
 });
+
+
+// Array para almacenar las publicaciones favoritas
+let favoritePosts = [];
+
+// Ejemplo de publicaciones disponibles en la red social
+const allPosts = [
+  { id: 1, content: "¡Primera publicación! 😊" },
+  { id: 2, content: "¡Me encanta esta red social! 🚀" },
+  { id: 3, content: "¿Quién más está aprendiendo JavaScript? 🤔" },
+];
 
 //============BOTONES DE EDITAR ==================
 document.getElementById('edit-header').addEventListener('click', function () {
@@ -154,3 +126,7 @@ document.getElementById('profile-file').addEventListener('change', function (eve
         reader.readAsDataURL(file);
     }
 });
+
+/* FUNCIONALIDAD */
+
+

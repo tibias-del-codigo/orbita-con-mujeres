@@ -1,3 +1,28 @@
+window.addEventListener("resize", ajusteDeTamanioDeHeader);
+
+function ajusteDeTamanioDeHeader() {
+    const title = document.querySelector(".title");
+    const image = document.querySelector(".header-flowers img");
+
+    const anchoDePantalla = window.innerWidth;
+
+    if (anchoDePantalla <= 750) {
+        title.style.fontSize = "4em";
+        image.style.width = "5em";
+        image.style.height = "5em";
+    } else if (anchoDePantalla > 750 && anchoDePantalla <= 1024) {
+        title.style.fontSize = "5em";
+        image.style.width = "6em";
+        image.style.height = "6em";
+    } else {
+        title.style.fontSize = "11em";
+        image.style.width = "16em";
+        image.style.height = "16em";
+    }
+}
+ajusteDeTamanioDeHeader();
+
+
 document.addEventListener('DOMContentLoaded', function () {
     function ajustarFotoPerfil() {
         const container = document.querySelector('.foto-perfil-container');
@@ -43,90 +68,53 @@ const allPosts = [
   { id: 3, content: "¿Quién más está aprendiendo JavaScript? 🤔" },
 ];
 
-//============BOTONES DE EDITAR ==================
-document.getElementById('edit-header').addEventListener('click', function () {
-    document.getElementById('header-file').click();
-});
+/* Editar contraseña y corroboración PENDIENTE */
 
-document.getElementById('header-file').addEventListener('change', function (event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            document.getElementById('header-image').src = e.target.result;
-        };
-        reader.readAsDataURL(file);
+document.querySelector('.guardar-cambios.boton-formulario').addEventListener('click', function(event) {
+    const contraseña = document.getElementById('contraseña').value;
+    const confirmarContraseña = document.getElementById('confirmar-contraseña').value;
+
+    // Verificar si las contraseñas coinciden
+    if (contraseña && confirmarContraseña && contraseña !== confirmarContraseña) {
+        // Mostrar mensaje de error si no coinciden
+        event.preventDefault(); // Evita que el formulario se envíe
+        document.getElementById('mensaje-error').style.display = 'block'; 
+    } else {
+        // Ocultar mensaje de error si las contraseñas coinciden o no han sido cambiadas
+        document.getElementById('mensaje-error').style.display = 'none';
     }
 });
 
-document.getElementById('edit-profile').addEventListener('click', function () {
-    document.getElementById('profile-file').click();
-});
+/* ADAPTARSE AL TAMAÑO DEL TEXTO*/
+// Seleccionar el textarea
+const textarea = document.getElementById('acercaDeMi');
 
-document.getElementById('profile-file').addEventListener('change', function (event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            document.getElementById('profile-image').src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-    }
-});
+// Función que ajusta la altura del textarea
+function autoResize() {
+    textarea.style.height = 'auto'; // Reinicia la altura para recalcular
+    textarea.style.height = textarea.scrollHeight + 'px'; // Ajusta según el contenido
+}
+
+// Escuchar el evento 'input' para ajustar en tiempo real
+textarea.addEventListener('input', autoResize);
+
+// Ajustar altura al cargar la página
+window.addEventListener('load', autoResize);
 
 
-/* FUNCIONALIDAD CAMBIAR PAGINA */
-// Función para cargar la imagen desde el local storage
-function loadImages() {
-    const headerImageSrc = localStorage.getItem('headerImage');
-    const profileImageSrc = localStorage.getItem('profileImage');
-
-    if (headerImageSrc) {
-        document.getElementById('header-image').src = headerImageSrc;
-    }
-
-    if (profileImageSrc) {
-        document.getElementById('profile-image').src = profileImageSrc;
+//Ajustar tamanio de acerca de mi 
+function ajustarAnchoContenedor() {
+    var columnaIzquierda = document.getElementById("columna-izquierda");
+    if (window.innerWidth < 768) {
+        columnaIzquierda.style.width = "100%";
+    } else {
+        columnaIzquierda.style.width = "100%";
+        columnaIzquierda.style.marginRight = "0";
     }
 }
 
-// Cargar imágenes al cargar la página
-window.onload = loadImages;
-
-// Editar imagen del header
-document.getElementById('edit-header').addEventListener('click', function () {
-    document.getElementById('header-file').click();
-});
-
-document.getElementById('header-file').addEventListener('change', function (event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            document.getElementById('header-image').src = e.target.result;
-            localStorage.setItem('headerImage', e.target.result); // Guardar en local storage
-        };
-        reader.readAsDataURL(file);
-    }
-});
-
-// Editar imagen de perfil
-document.getElementById('edit-profile').addEventListener('click', function () {
-    document.getElementById('profile-file').click();
-});
-
-document.getElementById('profile-file').addEventListener('change', function (event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            document.getElementById('profile-image').src = e.target.result;
-            localStorage.setItem('profileImage', e.target.result); // Guardar en local storage
-        };
-        reader.readAsDataURL(file);
-    }
-});
-
-/* FUNCIONALIDAD */
+// Ejecutar la función cuando se carga la página y cuando se cambia el tamaño de la ventana
+window.onload = ajustarAnchoContenedor;
+window.onresize = ajustarAnchoContenedor;
 
 

@@ -1,3 +1,28 @@
+window.addEventListener("resize", ajusteDeTamanioDeHeader);
+
+function ajusteDeTamanioDeHeader() {
+    const title = document.querySelector(".title");
+    const image = document.querySelector(".header-flowers img");
+
+    const anchoDePantalla = window.innerWidth;
+
+    if (anchoDePantalla <= 750) {
+        title.style.fontSize = "4em";
+        image.style.width = "5em";
+        image.style.height = "5em";
+    } else if (anchoDePantalla > 750 && anchoDePantalla <= 1024) {
+        title.style.fontSize = "5em";
+        image.style.width = "6em";
+        image.style.height = "6em";
+    } else {
+        title.style.fontSize = "11em";
+        image.style.width = "16em";
+        image.style.height = "16em";
+    }
+}
+ajusteDeTamanioDeHeader();
+
+
 document.addEventListener('DOMContentLoaded', function () {
   function ajustarFotoPerfil() {
       const container = document.querySelector('.foto-perfil-container');
@@ -23,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
           container.style.alignItems = 'center';
           container.style.marginTop = '-60px';
           fotoPerfil.style.marginTop = "-3em";
-          fotoPerfil.style.marginLeft = "10em";
+          fotoPerfil.style.marginLeft = "2em";
 
           nombreUsuario.style.textAlign = 'left';
       }

@@ -212,22 +212,23 @@ html, body {
 }
 
 /* Estilo de los botones */
-button {
+.boton-formulario {
     background-color: #E54875;
     color: white;
     border: none;
-    border-radius: 12px;
-    padding: 10px 20px;
+    border-radius: 15px;
+    padding: 20px 2em;
     font-size: 16px;
     cursor: pointer;
-    margin-bottom: 10px;
     transition: background-color 0.3s ease;
+    width: 40%;
+    margin: 10px auto;
 }
 .d-flex .btn {
-    margin-right: 10px; /* Espacio entre los botones */
+    margin-right: 10px; 
 }
 
-button:hover {
+.boton-formulario:hover {
     background-color: #c63c62;
 }
 
@@ -240,7 +241,7 @@ button:hover {
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     transition: background-color 0.3s ease; /* Efecto al pasar el mouse */
     margin-top: 3em; /* Espaciado superior para separar del contenedor */
-    width: 40%;
+    width: 13em;
     margin: 3em auto;
 
 }
@@ -255,3 +256,19 @@ button:hover {
     width: 100% !important;
     height: 350px;
 }
+
+  textarea {
+    width: 100%;          /* Ocupar todo el ancho del contenedor */
+    min-height: 100px;     /* Altura mínima */
+    overflow-y: auto;      /* Scroll vertical si es necesario */
+    resize: none;          /* No permitir redimensionamiento manual */
+    font-size: 1rem;       /* Tamaño de texto legible */
+  }
+
+  /* Ajustes responsivos para pantallas pequeñas */
+  @media (max-width: 768px) {
+    textarea {
+      min-height: 50vh;    /* Que ocupe al menos la mitad de la pantalla */
+      font-size: 1.1rem;   /* Texto un poco más grande */
+    }
+  }

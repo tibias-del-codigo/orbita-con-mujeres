@@ -80,10 +80,9 @@
         <header>
             <section>
                 <div class="header-pagina container-lg custom-container">
-                    <h1 class="Ajustes"></h1>
+                    <h1 class="title">Mi Perfil</h1>
                     <div class="header-flowers">
-                        <img src="../../assets/fotos/Flores-01.png"
-                            alt="Foto de flores representativas de Orbita con Mujeres">
+                        <img src="../../assets/fotos/Flores-01.png" alt="Foto de flores representativas de Orbita con Mujeres">
                     </div>
                 </div>
             </section>
@@ -105,12 +104,12 @@
         <div class="row">
         
             <!-- Columna izquierda (Acerca de mí) -->
-            <div class="col-md-3 col-12 d-flex justify-content-start">
-                <div class="contenedor-izquierdo">
-                    <div class=" card">
+            <div class="col-md-3 col-12 d-flex justify-content-start mb-4" id="columna-izquierda">
+                <div class="contenedor-izquierdo" style="padding: 10px; margin: 10px; width: 100%;">
+                    <div class="card" style="width: 100%;">
                         <div class="card-body acerca-de-mi-card">
                             <label for="acercaDeMi" class="form-label card-text">Acerca de mí:</label>
-                            <textarea id="acercaDeMi" class="form-control" rows="4" style="width: 100%;">¡Hola! Soy Tibio. Mi mamá es una de las fantásticas desarrolladoras web que hicieron posible esta red social. También es mi empleada porque yo soy el CEO de esta empresa. Me encanta ser parte de un equipo tan maravilloso. Mis amigas siempre me recuerdan que no hay nada imposible, ¡y que las mujeres en la tecnología son imparables!</textarea>
+                            <textarea id="acercaDeMi" class="form-control" rows="12" style="width: 100%; overflow: hidden; resize: vertical;">¡Hola! Soy Tibio. Mi mamá es una de las fantásticas desarrolladoras web que hicieron posible esta red social. También es mi empleada porque yo soy el CEO de esta empresa. Me encanta ser parte de un equipo tan maravilloso. Mis amigas siempre me recuerdan que no hay nada imposible, ¡y que las mujeres en la tecnología son imparables!</textarea>
                         </div>
                     </div>
                 </div>
@@ -133,12 +132,21 @@
                             <input type="text" class="form-control" id="usuario" placeholder="Ingresa tu nombre de usuario" required>
                         </div>
 
-                        <!-- Contraseña -->
+                        <!--Contraseña -->
                         <div class="mb-3">
-                            <label for="contraseña" class="form-label">Contraseña</label>
+                            <label for="contraseña" class="form-label">Nueva contraseña</label>
                             <input type="password" class="form-control" id="contraseña" placeholder="Ingresa tu contraseña">
                         </div>
-
+                        
+                        <!-- Campo para Confirmar Contraseña -->
+                        <div class="mb-3">
+                            <label for="confirmar-contraseña" class="form-label">Confirmar Contraseña</label>
+                            <input type="password" class="form-control" id="confirmar-contraseña" placeholder="Confirma tu contraseña">
+                        </div>
+                        
+                        <!-- Mensaje de error -->
+                        <p id="mensaje-error" style="color:magenta; display:none;">Las contraseñas no coinciden.</p>
+                        
                         <!-- Correo -->
                         <div class="mb-3">
                             <label for="correo" class="form-label">Correo</label>
@@ -147,9 +155,9 @@
 
                         <!-- Botones de Ayuda, Cerrar Sesión y Eliminar Cuenta -->
                         <div class="mb-4 d-flex flex-column">
-                            <button type="button" class="boton-ayuda">Ayuda</button>
-                            <button type="button" class="boton-cerrar">Cerrar Sesión</button>
-                            <button type="button" class="boton-eliminar">Eliminar Cuenta</button>
+                            <button type="button" class="boton-ayuda boton-formulario">Ayuda</button>
+                            <button type="button" class="boton-cerrar boton-formulario">Cerrar Sesión</button>
+                            <button type="button" class="boton-eliminar boton-formulario">Eliminar Cuenta</button>
                         </div>
                     </form>
                 </div>
@@ -160,7 +168,7 @@
 
         <!-- Botón Guardar Cambios -->
         <div class="d-grid">
-            <button type="submit" class="guardar-cambios">Guardar Cambios</button>
+            <button type="submit" class="guardar-cambios boton-formulario">Guardar Cambios</button>
         </div>
 
 

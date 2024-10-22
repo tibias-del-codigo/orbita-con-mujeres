@@ -97,15 +97,16 @@ body {
 
 .foto-perfil-container {
     display: flex; /* Flexbox para alinear horizontalmente */
-    align-items: center; /* Alinear verticalmente al centro */
+    align-items: left; /* Alinear verticalmente al centro */
     position: relative;
-    justify-content: center;
+    justify-content: flex-start;
     z-index: 2;
     margin-top: -50px;
     justify-content: flex-start; /* Asegura que los elementos estén alineados a la izquierda */
     padding: 10px;
     margin-left: 150px;
     margin-right: 150px;
+    text-align: center; 
 }
 
 .foto-perfil img{

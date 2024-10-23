@@ -1,4 +1,6 @@
 
+
+
 // Initialize a new ItemsController with currentId set to 0
 const postController = new PostsController(0);
 

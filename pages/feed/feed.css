@@ -166,17 +166,16 @@ body {
 .post-options {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 15px; 
 }
-
-.carita-feliz{
-margin-right: 5px;
-
-}
+/*Botón etiquetas*/
 
 .media-button,
-.activity-button {
+.activity-button,
+#menu-etiqueta {
     background-color: var(--pubBut-bg-color);
     border: none;
     padding: 10px;
@@ -186,7 +185,8 @@ margin-right: 5px;
 }
 
 .media-button:hover,
-.activity-button:hover {
+.activity-button:hover,
+#menu-etiqueta:hover {
     background-color: var(--navHovBut-bg-color);
     color: var(--textWhite-color);
 }
@@ -232,4 +232,20 @@ margin-right: 5px;
 
 .user{
     font-family: "Poppins";
+}
+
+/*Boton favorito*/
+
+
+
+#favorito-regular {
+    background-color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+}
+
+#favorito-regular.clickeado {
+	
+	color: var(--butPink-bg-color);
 }

@@ -157,14 +157,16 @@ body {
 .btn {
     font-weight: bold;
     font-family: "Poppins", sans-serif;
-    font-size: 1.1rem;
+    font-weight: 400;
+    font-size: 0.8rem; 
     color: var(--navText-color);
     background-color: #f1f1f1;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 5px 10px; 
+    border-radius: 25px; 
     transition: background-color 0.3s;
-    width: 80%;
-    margin-top: 20%;
+    width: 80%; 
+    margin-top: 10%; 
+    width: 6em;
 }
 
 .btn:hover {
@@ -238,16 +240,32 @@ body {
 
 /* Hover Ilustraciones */
 
-
-.tarjeta_foto .foto-hover {
-    display: none;
+.tarjeta_foto {
+    position: relative; /* Asegura que el contenedor tenga posición relativa */
+    height: 150px; /* Mantiene la altura para las imágenes */
+    width: 150px; /* Mantiene la anchura */
+    overflow: hidden; /* Asegura que nada se salga del contenedor */
+    margin: 0 auto; /* Centra el contenedor de la tarjeta */
 }
 
+.tarjeta_foto img {
+    position: absolute; /* Permite que las imágenes se superpongan */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajusta el tamaño de las imágenes al 100% del contenedor */
+    height: 100%; /* Asegura que las imágenes llenen el contenedor */
+    object-fit: cover; /* Mantiene la relación de aspecto y recorta si es necesario */
+    border-radius: 50%; /* Imágenes redondeadas */
+}
+
+.tarjeta_foto .foto-hover {
+    display: none; /* Esconde la imagen hover por defecto */
+}
 
 .tarjeta_foto:hover .foto-normal {
-    display: none;
+    display: none; /* Esconde la imagen normal al hacer hover */
 }
 
 .tarjeta_foto:hover .foto-hover {
-    display: inline-block;
+    display: block; /* Muestra la imagen hover al hacer hover */
 }

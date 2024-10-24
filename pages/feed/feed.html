@@ -79,40 +79,56 @@
         <section>
             <div class="header-pagina container-lg custom-container">
                 <div class="tags-section">
-                    <button class="tag-button">#Etiqueta</button>
-                    <button class="tag-button">#Etiqueta</button>
-                    <button class="tag-button">#Etiqueta</button>
-                    <button class="tag-button">#Etiqueta</button>
+                    <button class="tag-button">#CuidadoPersonal</button>
+                    <button class="tag-button">#Salud</button>
+                    <button class="tag-button">#Cultura</button>
+                    <button class="tag-button">#Ocio</button>
                 </div>
             </div>
             </div>
         </section>
     </header>
-
+<!--  -->
     <!-- ******************Nueva publicación********************* -->
     <main>
         <section class="section-new-post">
             <div class="new-post container-lg">
+                <form id="newPostForm">
                 <div class="post-header container-lg">
                     <img src="/assets/fotos/TIBIO.jpeg" alt="Perfil" class="profile-pic-status-bar">
                     <div class="input-publish-container">
-                        <input type="text" placeholder="¿Qué estás pensando?" class="input-post">
-                        <button class="publish-button">Publicar</button>
-                    </div>
+                        <input type="text" id="postText" placeholder="¿Qué estás pensando?" class="input-post">
+                        <button class="publish-button" type="submit" >Publicar</button>
+                    </div>  <!-- onclick="publishPost()" -->
                 </div>
 
-                <div class="post-options container-lg">
-                    <button class="media-button"><i class="bi bi-images "></i> Foto/video</button>
-                    <button class="activity-button"><i class=" carita-feliz bi bi-emoji-wink"></i>Sentimiento/actividad</button>
+                <div class="post-options">
+                    <input class="media-button" type="file" id="postImage" accept="image/*"> <!-- <i class="bi bi-images "></i> -->
+                   
+                    <div class="select" >
+                        <select id="menu-etiqueta">
+                            <option selected disabled> Etiqueta </option>
+                            <option value="cuidado" > Cuidado Personal </option>
+                            <option value="salud"> Salud </option>
+                            <option value="cultura"> Cultura </option>
+                            <option value="ocio"> Ocio </option>
+                        </select>
+                        
+
+                                              
+                    </div>
+
+
+                      <!-- Pendiente  -->
                 </div>
+                </form>
             </div>
         </section>
 
         <!--Publicaciónes-->
         <section>
-       
             <div class="row" data-masonry='{"percentPosition": true }'>
-                <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="col-sm-6 col-lg-4 mb-4" >
                     <div class="card">
                         <img src="../../assets/fotos/TIBIO.jpeg" alt="">
                         <div class="d-flex text-body-secondary pt-3 p-2">
@@ -121,7 +137,10 @@
                                 <strong class="user text-gray-dark">@TibioElGuapo</strong>           
                             </div>
                             <div class="d-flex align-items-center justify-content-end">
-                                <i class="bi bi-star"></i>
+                                <button id="favorito-regular">
+                                <i class="bi bi-star-fill"  onclick="cambiarColor()"></i>
+                                <!--<i class="bi bi-star" id="favorito-relleno"></i>-->
+                                </button>
                             </div>
                         </div>
                       <div class="card-body">
@@ -130,178 +149,6 @@
                       </div>
                     </div>
                 </div>
-
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                            <img src="" alt="">
-                            <div class="d-flex text-body-secondary pt-3 p-2">
-                                <img class="profile-pic-post"  style="width: 50px; margin-right: 10px; " src="../../assets/fotos/TIBIO.jpeg"></img>
-                                <div class="mb-0 small lh-sm d-flex align-items-center border-bottom w-100">
-                                    <strong class="user text-gray-dark">@TibioElGuapo</strong>           
-                                </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star"></i>
-                                </div>
-                            </div>
-                          <div class="card-body">
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                            </p>
-                          </div>
-                        </div>
-                    </div>
-                
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                            <img src="/orbita-con-mujeres/assets/fotos/TIBIO.jpeg" alt="">
-                            <div class="d-flex text-body-secondary pt-3">
-                                <img class="profile-pic-post"  style="width: 50px; " src="/../../assets/fotos/TIBIO.jpeg"></img>
-                                <div class="mb-0 small lh-sm d-flex align-items-center border-bottom w-100">
-                                    <strong class="user text-gray-dark">@TibioElGuapo</strong>           
-                                </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star"></i>
-                                </div>
-                            </div>
-                          <div class="card-body">
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                            </p>
-                          </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-sm-6 col-lg-4 mb-4">
-                        <div class="card">
-                            <img src="../../assets/fotos/TIBIO.jpeg" alt="">
-                            <div class="d-flex text-body-secondary pt-3 p-2">
-                                <img class="profile-pic-post"  style="width: 50px; margin-right: 10px;" src="../../assets/fotos/TIBIO.jpeg"></img>
-                                <div class="mb-0 small d-flex align-items-center border-bottom w-100">
-                                    <strong class="user text-gray-dark">@TibioElGuapo</strong>           
-                                </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star"></i>
-                                </div>
-                            </div>
-                          <div class="card-body">
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                            </p>
-                          </div>
-                        </div>
-                    </div>    
-
-                        <div class="col-sm-6 col-lg-4 mb-4">
-                            <div class="card">
-                                <img src="" alt="">
-                                <div class="d-flex text-body-secondary pt-3">
-                                    <img class="profile-pic-post"  style="width: 50px; " src="../../assets/fotos/TIBIO.jpeg"></img>
-                                    <div class="mb-0 small lh-sm d-flex align-items-center border-bottom w-100">
-                                        <strong class=" user text-gray-dark">@TibioElGuapo</strong>           
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-end">
-                                        <i class="bi bi-star"></i>
-                                    </div>
-                                </div>
-                              <div class="card-body">
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                </p>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-lg-4 mb-4">
-                            <div class="card">
-                                <img src="" alt="">
-                                <div class="d-flex text-body-secondary pt-3">
-                                    <img class="profile-pic-post"  style="width: 50px; " src="../../assets/fotos/TIBIO.jpeg"></img>
-                                    <div class="mb-0 small lh-sm d-flex align-items-center border-bottom w-100">
-                                        <strong class="user text-gray-dark">@TibioElGuapo</strong>           
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-end">
-                                        <i class="bi bi-star"></i>
-                                    </div>
-                                </div>
-                              <div class="card-body">
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                </p>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-lg-4 mb-4">
-                            <div class="card">
-                                <img src="/orbita-con-mujeres/assets/fotos/TIBIO.jpeg" alt="">
-                                <div class="d-flex text-body-secondary pt-3">
-                                    <img class="profile-pic-post"  style="width: 50px; " src="../../assets/fotos/TIBIO.jpeg"></img>
-                                    <div class="mb-0 small lh-sm d-flex align-items-center border-bottom w-100">
-                                        <strong class="user text-gray-dark">@TibioElGuapo</strong>           
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-end">
-                                        <i class="bi bi-star"></i>
-                                    </div>
-                                </div>
-                              <div class="card-body">
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                </p>
-                              </div>
-                            </div>
-                        </div>
-        
-                        <div class="col-sm-6 col-lg-4 mb-4">
-                            <div class="card">
-                                <img src="../../assets/fotos/TIBIO.jpeg" alt="">
-                                <div class="d-flex text-body-secondary pt-3 p-2">
-                                    <img class="profile-pic-post"  style="width: 50px; margin-right: 10px;" src="../../assets/fotos/TIBIO.jpeg"></img>
-                                    <div class="mb-0 small d-flex align-items-center border-bottom w-100">
-                                        <strong class="user text-gray-dark">@TibioElGuapo</strong>           
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-end">
-                                        <i class="bi bi-star"></i>
-                                    </div>
-                                </div>
-                              <div class="card-body">
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                </p>
-                              </div>
-                            </div>
-                        </div>
-        
-
-                            <div class="col-sm-6 col-lg-4 mb-4">
-                                <div class="card">
-                                    <img src="" alt="">
-                                    <div class="d-flex text-body-secondary pt-3">
-                                        <img class="profile-pic-post"  style="width: 50px; " src="../../assets/fotos/TIBIO.jpeg"></img>
-                                        <div class="mb-0 small lh-sm d-flex align-items-center border-bottom w-100">
-                                            <strong class="user text-gray-dark">@TibioElGuapo</strong>           
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-end">
-                                            <i class="bi bi-star"></i>
-                                        </div>
-                                    </div>
-                                  <div class="card-body">
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                    </p>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-4 mb-4">
-                                <div class="card">
-                                    <img src="" alt="">
-                                    <div class="d-flex text-body-secondary pt-3">
-                                        <img class="profile-pic-post"  style="width: 50px; " src="../../assets/fotos/TIBIO.jpeg"></img>
-                                        <div class="mb-0 small lh-sm d-flex align-items-center border-bottom w-100">
-                                            <strong class="user text-gray-dark">@TibioElGuapo</strong>           
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-end">
-                                            <i class="bi bi-star"></i>
-                                        </div>
-                                    </div>
-                                  <div class="card-body">
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                    </p>
-                                  </div>
-                                </div>
-                            </div>
-
             </div>
                 
         </section>
@@ -311,12 +158,13 @@
     <footer>
         <!-- <h3>PENDIENTE</h3> -->
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-    <script src="contacto.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script> -->
+    <script src="postController.js"></script>
+    <script src="feed.js"></script>
+    <script src="add-favorite.js"></script>
     <script src="../../src/navbar/navbar.js"></script>
 </body>
 

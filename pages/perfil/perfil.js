@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
           container.style.alignItems = 'center';
           container.style.marginTop = '-60px';
           fotoPerfil.style.marginTop = "-3em";
-          fotoPerfil.style.marginLeft = "2em";
+          fotoPerfil.style.marginLeft = "8em";
 
           nombreUsuario.style.textAlign = 'left';
       }

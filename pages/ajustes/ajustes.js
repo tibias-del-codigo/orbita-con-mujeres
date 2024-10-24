@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
             container.style.alignItems = 'center'; // Alinear verticalmente
             container.style.marginTop = '-60px';
             fotoPerfil.style.marginTop = "-3em";
+            fotoPerfil.style.marginLeft = "8em";
 
             nombreUsuario.style.textAlign = 'left'; // Alinea el texto a la izquierda
         }
@@ -101,14 +102,13 @@ textarea.addEventListener('input', autoResize);
 // Ajustar altura al cargar la página
 window.addEventListener('load', autoResize);
 
-
 //Ajustar tamanio de acerca de mi 
 function ajustarAnchoContenedor() {
     var columnaIzquierda = document.getElementById("columna-izquierda");
     if (window.innerWidth < 768) {
         columnaIzquierda.style.width = "100%";
     } else {
-        columnaIzquierda.style.width = "100%";
+        columnaIzquierda.style.width = "30%";
         columnaIzquierda.style.marginRight = "0";
     }
 }

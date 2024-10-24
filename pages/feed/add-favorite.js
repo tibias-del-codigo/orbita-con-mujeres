@@ -1,5 +1,5 @@
 function cambiarColor() {
-    var boton = document.getElementById("favorito-regular");
+    let boton = document.getElementById("favorito-regular");
     boton.classList.toggle("clickeado");  // Alterna la clase 'clickeado'
 }
 

@@ -1,6 +1,4 @@
 
-
-
 // Initialize a new ItemsController with currentId set to 0
 const postController = new PostsController(0);
 
@@ -31,6 +29,12 @@ newPostForm.addEventListener('submit', (event) => {
                         <img class="profile-pic-post" style="width: 50px; margin-right: 10px;" src="../../assets/fotos/TIBIO.jpeg" alt="Perfil">
                         <div class="mb-0 small d-flex align-items-center border-bottom w-100">
                             <strong class="user text-gray-dark">@TibioElGuapo</strong>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-end">
+                                <button id="favorito-regular">
+                                <i class="bi bi-star-fill"  onclick="cambiarColor()"></i>
+                                <!--<i class="bi bi-star" id="favorito-relleno"></i>-->
+                                </button>
                         </div>
                     </div>
                     <div class="card-body">
@@ -66,5 +70,4 @@ newPostForm.addEventListener('submit', (event) => {
     newPostImageUrl.value = ''; 
 
 });
-
 

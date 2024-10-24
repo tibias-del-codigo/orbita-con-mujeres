@@ -1,3 +1,10 @@
+window.onload = function() {
+    // Al cargar la página, agregar la clase que hace que aparezca
+    setTimeout(function() {
+        document.body.classList.add('fade-in');
+    }, 100); // Pequeño retraso para que el efecto sea visible
+};
+
 // Ajustar estilos según el ancho de la pantalla
 function ajustarResponsivo() {
     const titulo = document.querySelector("#titulo h1");
@@ -89,3 +96,4 @@ document.getElementById('btn-enviar').addEventListener('click', function () { /*
         mensajeError.insertAdjacentHTML('afterbegin', alertError);
     }
 });
+

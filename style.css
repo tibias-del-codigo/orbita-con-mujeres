@@ -1,25 +1,63 @@
+:root {
+    /* color de fondo */
+    --body-bg-color: linear-gradient(90deg, rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    /* cuadros de imput ,lenado de informacion */
+    --input-bg-color: rgba(255, 255, 255, 0.829);
+    /* caja de formulario de contacto */
+    --boxform-bg-color: #FFD169;
+     /* botones rosa */
+    --butPink-bg-color: #E54875;
+    /* text Titulo */
+    --text-title-color:#eee9af;
+    /* text Crear Cuenta */
+    --text-account-color: #777458;
+}
+
+/* **********Fondo*********** */
 body {
-    background-color: #f2f2f2;
-}
-/* EN PROGRESO */
-main {
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center;     /* Centrar verticalmente */
-    height: 100vh;           /* Altura completa del viewport */
-    text-align: center;
+    background: var(--body-bg-color);
+    transition: opacity 3s ease; /* Transición de opacidad en 3 segundos */
+    opacity: 1;
 }
 
-img {
-    width: 300px;
+body.fade-out {
+    opacity: 0; /* Cambia la opacidad a 0 para el desvanecimiento */
 }
 
-body, html {
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Evita el scroll horizontal */
+    box-sizing: border-box;
+    
 }
 
-.container {
-    max-width: 100%; /* Asegúrate de que el contenedor no sobrepase el ancho */
+/* ************** Titulo **************** */
+h1,
+h2{
+    
+    color: var(--text-title-color);
+    text-align: center;
+    margin-left: -3em;
+    margin-top:0.3em;
+    /* Formato Texto */
+    font-size: 7em;
+    font-family: "Style Script", cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* ***************** Imagen de Bienvenida ********************** */
+#imagenMujeres{
+    
+    width: 50%;/* Tamaño inicial para pantallas grandes */
+    padding: 0;
+    margin: 0;
+    position: absolute; 
+    bottom: 0;          /* Pegada al fondo */
+    left: 0;            /* Pegada a la izquierda */
+    right: 0;
+    /* Ajustes generales para imágenes y contenedores */
+    max-width: 100%;
+    height: auto;  /* es para ser responsivo ...verificarlo *//* Mantener la proporción de la imagen */
+    position: fixed;    /* Anclar en la pantalla, sin importar el scroll */
+    z-index: -1;        /* Enviar al fondo si sobrepasa otros elementos */
+} 

@@ -1,0 +1,164 @@
+:root {
+    /* color de fondo */
+    --body-bg-color: linear-gradient(90deg, rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    /* cuadros de imput ,lenado de informacion */
+    --input-bg-color: rgba(255, 255, 255, 0.829);
+    /* caja de formulario de contacto */
+    --boxform-bg-color: #FFD169;
+     /* botones rosa */
+    --butPink-bg-color: #E54875;
+    /* text Titulo */
+    --text-title-color:#eee9af;
+    /* text Crear Cuenta */
+    --text-account-color: #777458;
+}
+
+/* **********Fondo*********** */
+body {
+    background: var(--body-bg-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* ************** Titulo **************** */
+h1,
+h2{
+    
+    color: var(--text-title-color);
+    text-align: center;
+    margin-left: -3em;
+    margin-top:0.3em;
+    /* Formato Texto */
+    font-family: "Style Script", cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ************** Cuadro de Sing In**************** */
+.form-control{
+    background: var(--input-bg-color);
+}
+
+h3{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 2em;
+    color: var(--text-account-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#box-contacto{
+    background: var(--text-title-color);
+    box-shadow: 0 0 8px 35px var(--text-title-color);
+    font-family: "Poppins", sans-serif;
+  /*  font-family: "Montserrat", sans-serif;   */
+    margin-right: 10em;
+    margin-top: -17em;
+}
+
+.btn{
+    background: var(--butPink-bg-color);
+    font-size: 20px;
+    width: 200px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.btn:hover {
+    background-color: var(--butPink-bg-color);
+}
+
+#flexCheckDefault1:checked{
+    background-color: var(--butPink-bg-color);
+    border: 2px solid var(--butPink-bg-color);
+}
+#flexCheckDefault2:checked{
+    background-color: var(--butPink-bg-color);
+    border: 2px solid var(--butPink-bg-color);
+}
+
+.form-check-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px pink;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    margin-top: -60px;
+}
+
+.container#containerlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fw-bold{
+    color: black;
+}
+
+
+/* ***************** Imagen de Bienvenida ********************** */
+#imagenMujeres{
+    
+    width: 50%;/* Tamaño inicial para pantallas grandes */
+    padding: 0;
+    margin: 0;
+    position: absolute; 
+    bottom: 0;          /* Pegada al fondo */
+    left: 0;            /* Pegada a la izquierda */
+    right: 0;
+    /* Ajustes generales para imágenes y contenedores */
+    max-width: 100%;
+    height: auto;  /* es para ser responsivo ...verificarlo *//* Mantener la proporción de la imagen */
+    position: fixed;    /* Anclar en la pantalla, sin importar el scroll */
+    z-index: -1;        /* Enviar al fondo si sobrepasa otros elementos */
+} 
+
+/* Ajuste para pantallas pequeñas (celulares) */
+@media (max-width: 576px) {
+    #imagenMujeres {
+        width: 100%;    /* La imagen ocupará todo el ancho disponible */
+    }
+}
+
+/* Ajuste para tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+    #imagenMujeres {
+        width: 70%;    /* Tamaño más grande que en celulares */
+    }
+}
+
+
+/* Responsividad para pantallas pequeñas (celulares) */
+@media (max-width: 576px) {
+    #box-contacto {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    h1, h2 {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+/* Responsividad para tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+    #box-contacto {
+        width: 80%;
+        margin-right: 0;
+    }
+
+}
+

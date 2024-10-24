@@ -1,0 +1,82 @@
+:root {
+    /* color de fondo */
+    --body-bg-color: #f2f2f2;
+    /* cuadros de imput ,lenado de informacion */
+    --input-bg-color: rgba(255, 255, 255, 0.829);
+    /* caja de formulario de contacto */
+    --boxform-bg-color: #FFD169;
+    /* Barra de Navegación */
+    /* Color de barra de navegacion */
+    --navbar-bg-color: #eee9af;
+    /* texto en navegacion*/
+    --navText-color: black;
+    /* boton  en navegacion*/
+    --navBut-bg-color: white;
+    /* texto una vez realizado el hover en navegacion*/
+    --textWhite-color: white;
+    /* boton una vez realizado el hover en navegacion*/
+    --navHovBut-bg-color: #7a8937;
+    /* botones rosa */
+    --butPink-bg-color: #E54875;
+     /* Header*/
+     /* Fondo de título */
+    --header-bg-color: linear-gradient(180deg, rgba(33, 145, 117, 1) 0%, rgba(255, 228, 51, 1) 100%);
+    /* Header de pagina gradiente */
+    --headerPage-bg-color: linear-gradient(to bottom, #a8f57a, #f2f2f2);
+    /* Botón Publicar */
+    --pubBut-bg-color:#e7e7e7;
+    /* Gris oscuro */
+    --lineD-color:#ddd;
+    /* Tecxto de Usuario */
+    --textUsuario-color: #333;
+}
+
+body {
+    background-color: var(--body-bg-color);
+}
+
+
+/* Alinear el contenido del <main> */
+main {
+    display: flex;            /* Flexbox para centrar */
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    height: 100vh;            /* Altura completa del viewport */
+    text-align: center;       /* Texto alineado al centro */
+    padding: 70px;
+}
+
+/* Imagen con tamaño ajustado */
+img#trabajando {
+    max-width: 300px; /* Ajusta según el diseño */
+    height: auto;     /* Mantiene la proporción */
+    margin: 20;
+    padding:20;
+}
+/* Evitar desbordamiento del contenedor */
+
+.container-md {
+    max-width: 90%; /* Ancho máximo para evitar que se desborde */
+}
+
+html, body {
+    margin: 0;
+    padding:0;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    width: 100%;
+    height: 100%;
+} 
+
+/* .container {
+    max-width: 100%; /* Asegúrate de que el contenedor no sobrepase el ancho 
+}  */
+
+/* Estilo para el párrafo */
+p {
+    font-size: 1.5rem;           /* Aumenta el tamaño del texto */
+    margin: 10;                   /* Elimina márgenes extra */
+    color: #333;                 /* Color del texto */
+    font-family: 'Poppins', sans-serif; /* Fuente personalizada */
+    padding-top: 20;
+
+}

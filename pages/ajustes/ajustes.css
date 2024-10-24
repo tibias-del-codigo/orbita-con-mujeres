@@ -31,8 +31,11 @@
     --textUsuario-color: #333;
 }
 
-body {
+html, body {
     background-color: var(--body-bg-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evitar desplazamientos horizontales */
 }
 
 /***** CSS HEADER *****/
@@ -98,6 +101,7 @@ body {
     padding: 10px;
     margin-left: 150px;
     margin-right: 150px;
+    text-align: center; 
 }
 
 .foto-perfil img{
@@ -118,14 +122,36 @@ body {
 }
 
 .nombre-usuario {
-    margin-left: 15px; /* Espacio entre la foto de perfil y el nombre */
+    display: inline-block; /* Cambiar a inline-block para que el fondo se ajuste al contenido */
+    margin-left: 15px;
     font-size: 1.5rem;
     background-color: white;
     border-radius: 15px;
     padding: 10px;
     color: #333;
-    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra negra */
+    white-space: nowrap; /* Evitar que el nombre se rompa en varias líneas */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.cambiar-foto {
+    position: absolute;
+    top: 5px; /* Ajusta la posición vertical del símbolo */
+    right: 5px; /* Alinea el símbolo dentro del borde derecho de la foto */
+    background-color: #E54875; /* Color de fondo del símbolo */
+    color: white; /* Color del texto */
+    border-radius: 50%; /* Redondear el fondo */
+    width: 40px; /* Ancho del círculo */
+    height: 40px; /* Alto del círculo */
+    display: flex; /* Centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    font-size: 24px; /* Tamaño de la fuente */
+    font-weight: bold; 
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el símbolo */
+    transition: background-color 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.cambiar-foto:hover {
+    background-color: #c63c62; /* Cambia el color de fondo al pasar el mouse */
 }
 
 /* BOTONES DE EDITAR */
@@ -177,5 +203,72 @@ body {
 
 
 
-/* ===============FUNCIONALIDAD DE CAMBIAR IMAGENES============= */
+/* ===============EDITAR PERFIL============= */
+/* Borde y estilo del contenedor de ajustes */
+.contenedor-ajustes {
+    border: 2px solid black; /* Borde negro */
+    border-radius: 12px; /* Bordes redondeados */
+    background-color: #f8f9fa; /* Fondo claro */
+}
 
+/* Estilo de los botones */
+.boton-formulario {
+    background-color: #E54875;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 20px 2em;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 40%;
+    margin: 10px auto;
+}
+.d-flex .btn {
+    margin-right: 10px; 
+}
+
+.boton-formulario:hover {
+    background-color: #c63c62;
+}
+
+.guardar-cambios {
+    background-color: #E54875; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno (ajusta según sea necesario) */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Efecto al pasar el mouse */
+    margin-top: 3em; /* Espaciado superior para separar del contenedor */
+    width: 13em;
+    margin: 3em auto;
+
+}
+
+.guardar-cambios:hover {
+    background-color: #c63c62; 
+}
+
+.card-body .acerca-de-mi-card {
+    padding: 10px;
+    margin: 0;
+    width: 100% !important;
+    height: 350px;
+}
+
+  textarea {
+    width: 100%;          /* Ocupar todo el ancho del contenedor */
+    min-height: 100px;     /* Altura mínima */
+    overflow-y: auto;      /* Scroll vertical si es necesario */
+    resize: none;          /* No permitir redimensionamiento manual */
+    font-size: 1rem;       /* Tamaño de texto legible */
+  }
+
+  /* Ajustes responsivos para pantallas pequeñas */
+  @media (max-width: 768px) {
+    textarea {
+      min-height: 50vh;    /* Que ocupe al menos la mitad de la pantalla */
+      font-size: 1.1rem;   /* Texto un poco más grande */
+    }
+  }
